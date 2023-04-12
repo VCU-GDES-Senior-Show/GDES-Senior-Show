@@ -1,0 +1,18 @@
+{% assign student_id        = student.name | slugify %}
+
+{% if student.displayName %}
+    {% assign student_name  = student.displayName %}
+{% else %}
+    {% assign student_name  = student.name %}
+{% endif %}
+
+{% assign student_email     = student.email %}
+{% assign student_insta = student.instagram %}
+{% assign student_twit  = student.twitter %}
+{% assign student_socials  = student.otherSo %}
+{% assign student_website  = student.website %}
+
+{% assign student_projectName   = student.projectName %}
+{% assign student_projectDesc = student.projectDesc %}
+
+{% assign student_url = student.url%}

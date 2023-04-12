@@ -23,17 +23,17 @@
 
 
 title: MYCELIUM
-email: #your-email@example.com
+email: 
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: #jekyllrb
-github_username:  #jekyll
+baseurl:
+url:
+twitter_username:
+github_username:
 
 
 plugins:
@@ -45,9 +45,17 @@ plugins:
 collections:
   students:
     output: true
+    permalink: /directory/:name
     source: student_info.csv
     id_key: displayName
     layout: student.html
+
+defaults:
+  - scope:
+      path: "_students/"
+      type: "student"
+    values:
+      layout: "student"
 
 
 

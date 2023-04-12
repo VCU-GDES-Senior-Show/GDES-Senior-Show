@@ -1,3 +1,27 @@
 ---
 layout: default
 ---
+<!-- DON'T EDIT ANY OF THE CODE BETWEEN THESE COMMENTS -->
+{% include navigation.html %}
+{% for student in site.students %}
+    {% include assign.html %}
+    {% if page.url contains student_id %}
+<!-- DON'T EDIT ANY OF THE CODE BETWEEN THESE COMMENTS -->
+
+    <p>{{student_name}}</p>
+    
+
+
+
+
+
+
+
+
+
+
+
+<!-- DON'T EDIT ANY OF THE CODE BETWEEN THESE COMMENTS -->
+    {% endif %}
+{% endfor %}
+<!-- DON'T EDIT ANY OF THE CODE BETWEEN THESE COMMENTS -->

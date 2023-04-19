@@ -7,12 +7,32 @@
 {% endif %}
 
 {% assign student_email     = student.email %}
-{% assign student_insta = student.instagram %}
-{% assign student_twit  = student.twitter %}
-{% assign student_socials  = student.otherSo %}
-{% assign student_website  = student.website %}
+
+{% assign student_instagram = student.instagram %}
+{% assign student_instagramLink = "https://instagram.com/" | append: student.instagram %}
+
+
+
+
+{% assign student_socials  = student.otherSocials %}
+
+
+
+{% if student.website contains "https://"%}
+    {% assign student_website = student.website | replace: "https://", "" %}
+{% else %}
+    {% assign student_website = student.website %}
+{% endif %}
+
+
+{% if student.website contains "https://"%}
+    {% assign student_websiteLink  = student.website %}
+{% else %}
+    {% assign student_websiteLink  = "https://" | append: student.website %}
+{% endif %}
 
 {% assign student_projectName   = student.projectName %}
 {% assign student_projectDesc = student.projectDesc %}
 
 {% assign student_url = student.url%}
+{% assign student_tag = student.tags%}

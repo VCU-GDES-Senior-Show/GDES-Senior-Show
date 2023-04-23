@@ -23,7 +23,13 @@ layout: default
 
 
 
-            <a href="{{ student_url }}">{{student_name}}</a>
+            <a href="{{ student_url }}">
+                {% if student_displayName%}
+                    {{ student_displayName }}
+                {% else %}
+                    {{ student_name }}
+                {% endif %}
+            </a>
 
 
 

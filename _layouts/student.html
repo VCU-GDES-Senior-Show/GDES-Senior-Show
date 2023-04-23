@@ -1,45 +1,58 @@
 ---
 layout: default
 ---
-<!-- DON'T EDIT ANY OF THE CODE BETWEEN THESE COMMENTS -->
 {% include navigation.html %}
+
+<div class="student_page">
+<!-- DON'T EDIT ANY OF THE CODE BETWEEN THESE COMMENTS -->
 {% assign counter = 1 %}
 {% for student in site.students %}
     {% include assign.html %}
     {% if page.url contains student_id %}
 <!-- DON'T EDIT ANY OF THE CODE BETWEEN THESE COMMENTS -->
 
-    <h2 class="student_name">{{ student_name }}</h2>
-    <h3 class="student_projectName">{{ student_projectName }}</h3>
+    <div class="student_content">
+        <section class="student_info-container">
+            <h2 class="student_name">
+                {% if student_displayName%}
+                    {{ student_displayName }}
+                {% else %}
+                    {{ student_name }}
+                {% endif %}
+            </h2>
 
-    <p>
-        {%- for tag in student_tag -%}
-            {% assign tag_class = tag | slugify %}
-                <span class="tag {{ tag_class }}">{{ tag }}</span>
-        {%- endfor -%}
-    </p>
+            <h3 class="student_projectName">{{ student_projectName }}</h3>
 
-    <p class="student_projectDesc">{{ student_projectDesc }}</p>
+            <p>
+                {%- for tag in student_tag -%}
+                    {% assign tag_class = tag | slugify %}
+                        <span class="tag {{ tag_class }}">{{ tag }}</span>
+                {%- endfor -%}
+            </p>
 
+            <div class="student_description">
+                <p class="student_projectDesc">{{ student_projectDesc }}</p>
+             </div>
 
-    <a class="student_email" href="mailto:{{student_email}}" target="_blank">{{ student_email }}</a>
+            <a class="student_email" href="mailto:{{student_email}}" target="_blank">{{ student_email }}</a>
 
-    <a class="student_insta" href="{{student_instagramLink}}" target="_blank">@{{ student_instagram }}</a>
+            <a class="student_insta" href="{{student_instagramLink}}" target="_blank">@{{ student_instagram }}</a>
 
-    <a class="student_website" href="{{student_websiteLink}}" target="_blank">{{ student_website }}</a>
+            <a class="student_website" href="{{student_websiteLink}}" target="_blank">{{ student_website }}</a>
 
-    <a class="student_website" href="{{student_socials}}" target="_blank">{{ student_socials }}</a>
+            <a class="student_website" href="{{student_socials}}" target="_blank">{{ student_socials }}</a>
+        </section>
 
+        <section class="student_image-container">
+            <img data-enlargable src="{{ student_image1 }}">
+            <img data-enlargable src="{{ student_image2 }}">
 
+            {% if student_image3 != "" %}
+                <img data-enlargable src="{{ student_image3 }}">
+            {% endif %}
+        </section>
 
-
-
-
-
-
-
-
-
+    </div>
 
 <!-- DON'T EDIT ANY OF THE CODE BETWEEN THESE COMMENTS -->
     {% endif %}
@@ -52,8 +65,82 @@ layout: default
     {% endfor %}
 
     {% if student != page and common_tags != "" %}
-        <a class="page_connections" id="connection{{counter}}" href="{{ student.url }}">{{ student.title }}</a>
+        <a class="student_connections" id="connection{{counter}}" href="{{ student.url }}">
+            {{ student_projectName }}
+        </a>
         {% assign counter = counter | plus: 1 %}
     {% endif %}
 {% endfor %}
 <!-- DON'T EDIT ANY OF THE CODE BETWEEN THESE COMMENTS -->
+</div>
+
+
+
+<script>
+   $('img[data-enlargable]').addClass('img-enlargable').click(function(){
+    var src = $(this).attr('src');
+    $('<div>').css({
+        background: 'RGBA(0,0,0,.5) no-repeat center',
+        backgroundSize: 'contain',
+        width:'100%', 
+        height:'100%',
+        position:'fixed',
+        zIndex:'10000',
+        top:'0', left:'0',
+        cursor: 'zoom-out',
+        display: 'flex',
+        justifyContent: 'center',
+    }).append($('<img>').attr('src', src).css({
+        maxHeight: '90%', /* Add this to limit the maximum height to 90% */
+        display: 'block',
+        margin: 'auto',
+        cursor: 'zoom-out'
+    })).click(function(){
+        $(this).remove();
+    }).appendTo('body');
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+    <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                <img src="{{ student_image1 }}">
+            </li>
+                <li class="splide__slide">
+                <img src="{{ student_image2 }}">
+            </li>
+            
+            {% if student_image3 != "" %}
+                <li class="splide__slide">
+                    <img src="{{ student_image3 }}">
+                </li>
+            {% endif %}
+            </ul>
+    </div>
+    </section> -->
+
+<!-- <script src="../assets/javascript/splide-4.1.3/dist/js/splide.min.js"></script>
+<script>
+    var splide = new Splide( '#image-carousel', {
+        type   : 'loop',
+        padding: { left: '10%', right: '10%'},
+        gap: 100
+        } );
+
+splide.mount();
+  </script> -->

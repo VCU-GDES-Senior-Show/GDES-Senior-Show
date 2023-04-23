@@ -1,10 +1,51 @@
 {% assign student_id        = student.name | slugify %}
 
-{% if student.displayName %}
-    {% assign student_name  = student.displayName %}
-{% else %}
-    {% assign student_name  = student.name %}
-{% endif %}
+{% assign student_name  = student.name %}
+{% assign student_displayName = student.displayName %}
+
+
+
+
+
+{% assign student_path1_jpg = '../assets/images/' | append: student_id | append: "/" | append: student_id | append: "_image1.jpg" %}
+{% assign student_path1_png = '../assets/images/' | append: student_id | append: "/" | append: student_id | append: "_image1.png" %}
+
+{% assign student_path2_jpg = '../assets/images/' | append: student_id | append: "/" | append: student_id | append: "_image2.jpg" %}
+{% assign student_path2_png = '../assets/images/' | append: student_id | append: "/" | append: student_id | append: "_image2.png" %}
+
+{% assign student_path3_jpg = '../assets/images/' | append: student_id | append: "/" | append: student_id | append: "_image3.jpg" %}
+{% assign student_path3_png = '../assets/images/' | append: student_id | append: "/" | append: student_id | append: "_image3.png" %}
+
+{% assign student_image1 = student_path1_jpg %}
+{% assign student_image2 = student_path2_jpg %}
+{% assign student_image3 = "" %}
+
+
+
+{% for static_file in site.static_files %}
+    {% if static_file.path contains student_id and static_file.path contains '_image1.png' and page.url contains student_id %}
+        {% assign student_image1 = student_path1_png %}
+    {% endif %}
+{% endfor %}
+
+{% for static_file in site.static_files %}
+    {% if static_file.path contains student_id and static_file.path contains '_image2.png' and page.url contains student_id %}
+        {% assign student_image2 = student_path2_png %}
+    {% endif %}
+{% endfor %}
+
+{% for static_file in site.static_files %}
+    {% if static_file.path contains student_id and static_file.path contains '_image3.jpg' and page.url contains student_id %}
+        {% assign student_image3 = student_path3_jpg %}
+    {% elsif static_file.path contains student_id and static_file.path contains '_image3.png' and page.url contains student_id%}
+        {% assign student_image3 = student_path3_png %}
+    {% endif %}
+{% endfor %}
+
+
+
+
+
 
 {% assign student_email     = student.email %}
 
@@ -12,27 +53,26 @@
 {% assign student_instagramLink = "https://instagram.com/" | append: student.instagram %}
 
 
-
-
 {% assign student_socials  = student.otherSocials %}
 
-
-
-{% if student.website contains "https://"%}
-    {% assign student_website = student.website | replace: "https://", "" %}
+{% if student.website contains "https://" %}
+    {% assign student_website = student.website | replace: "https://", "" | replace: "/", "" %}
+{% elsif student.website contains "http://" %}
+    {% assign student_website = student.website | replace: "http://", "" | replace: "/", "" %}
 {% else %}
-    {% assign student_website = student.website %}
+    {% assign student_website = student.website | replace: "/", "" %}
 {% endif %}
 
-
 {% if student.website contains "https://"%}
+    {% assign student_websiteLink  = student.website %}
+{% elsif student.website contains "http://"%}
     {% assign student_websiteLink  = student.website %}
 {% else %}
     {% assign student_websiteLink  = "https://" | append: student.website %}
 {% endif %}
 
 {% assign student_projectName   = student.projectName %}
-{% assign student_projectDesc = student.projectDesc %}
+{% assign student_projectDesc = student.projectDesc  | newline_to_br %}
 
 {% assign student_url = student.url%}
 {% assign student_tag = student.tags%}

@@ -1,12 +1,110 @@
-.page_connections {
+.student_page {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+    .student_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+        width: 70%;
+        height: 70%;
+        padding: 100px;
+
+        .student_info-container {
+            max-width: 45%;
+            height: 100%;
+            position: relative;
+
+            .student_description {
+                height: 75%;
+                position: relative;
+                overflow-y: scroll;
+                text-align: left;
+
+                &::-webkit-scrollbar {
+                    width: 8px; 
+                    background-color: $white; 
+                    position: absolute;
+                    left: 0; 
+
+                    display: none;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: $white; 
+                    border-radius: 4px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background-color: $green; 
+                }
+            }
+        }
+
+        .student_image-container {
+            max-width: 45%;
+            height: 100%;
+            overflow-y: scroll;
+            border-radius: 20px;
+            gap: 20px;
+
+            img {
+                max-width: 100%;
+                object-fit: contain;
+                border-radius: 20px;
+            }
+
+            &:hover {
+                cursor: zoom-in;
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        
+
+    }
+}
+
+.student_connections {
     position: absolute;
-    top: 0;
+    top: 12px;
 }
 
 #connection1 {
-    right: 50%;
+    right: 56%;
 }
 
 #connection2 {
-    right: 10%;
+    right: 32%;
 }
+
+#connection3 {
+    right: 8%;
+}
+
+
+        // #image-carousel{
+        //     max-width: 40%;
+        //     height: 75%;
+        // }
+
+        // .splide__slide {
+        //     border-radius: 20px;
+        //     height: 100%;
+        //     display: flex;
+        //     align-items: center;
+
+        //     img {
+        //         display: block;
+        //         margin: auto;
+        //         max-width: 100%;
+        //         height: auto;
+        //         border-radius: 20px;
+        //         object-fit: contain;
+        //     }
+        // }

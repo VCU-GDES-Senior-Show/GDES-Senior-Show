@@ -6,7 +6,11 @@ layout: default
 <div class="student_page">
 <!-- DON'T EDIT ANY OF THE CODE BETWEEN THESE COMMENTS -->
 {% assign counter = 1 %}
+{% assign studentCounter = 1 %}
+
 {% for student in site.students %}
+    {% assign studentCounter = studentCounter | plus: 1 %}
+
     {% include assign.html %}
     {% if page.url contains student_id %}
 <!-- DON'T EDIT ANY OF THE CODE BETWEEN THESE COMMENTS -->

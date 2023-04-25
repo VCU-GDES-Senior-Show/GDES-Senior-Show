@@ -13,33 +13,36 @@ layout: default
 
     <div class="student_content">
         <section class="student_info-container">
-            <h2 class="student_name">
+            
+
+            <h2 class="student_projectName">{{ student_projectName }}</h2>
+
+            <h3 class="student_name">
                 {% if student_displayName%}
                     {{ student_displayName }}
                 {% else %}
                     {{ student_name }}
                 {% endif %}
-            </h2>
-
-            <h3 class="student_projectName">{{ student_projectName }}</h3>
-
+            </h3>
+            
             <p>
                 {%- for tag in student_tag -%}
                     {% assign tag_class = tag | slugify %}
                         <span class="tag {{ tag_class }}">{{ tag }}</span>
                 {%- endfor -%}
             </p>
-
+            
             <div class="student_description">
                 <p class="student_projectDesc">{{ student_projectDesc }}</p>
-             </div>
+            </div>
+            
 
             <a class="student_email" href="mailto:{{student_email}}" target="_blank">{{ student_email }}</a>
-
-            <a class="student_insta" href="{{student_instagramLink}}" target="_blank">@{{ student_instagram }}</a>
-
+            <br>
             <a class="student_website" href="{{student_websiteLink}}" target="_blank">{{ student_website }}</a>
-
+            <br>
+            <a class="student_insta" href="{{student_instagramLink}}" target="_blank">@{{ student_instagram }}</a>
+            <br>
             <a class="student_website" href="{{student_socials}}" target="_blank">{{ student_socials }}</a>
         </section>
 

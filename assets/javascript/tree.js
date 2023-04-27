@@ -4,7 +4,7 @@ var min_dist = 5;
 var max_depth = 0;
 
 function setup() {
-	createCanvas(800,600);
+	createCanvas(windowWidth,windowHeight);
 
 	frameRate(24);
 	//noLoop();
@@ -115,10 +115,10 @@ function Leaf(){
 	
 	var radius =  sqrt( random(0, pow( (width-100)/2, 2) ) );
 	var angle = random(0, PI);
-	this.pos = createVector((width/2)+radius*cos(angle), (height-150)-radius*sin(angle));
+	this.pos = createVector((width/2)+radius*cos(angle), (height-300)-radius*sin(angle));
 	
 	this.show = function() {
-		fill(255);
+		noFill();
 		noStroke();
 		quad(this.pos.x, this.pos.y, this.pos.x+1, this.pos.y, this.pos.x+1, this.pos.y+1, this.pos.x, this.pos.y+1);
 	}
@@ -157,8 +157,12 @@ function Branch(parent, pos, dir) {
 		if (parent != null) {
 			var width = (max_depth - this.depth) / max_depth * 10 + 0.5;
 			strokeWeight(width);
+            noFill();
 			stroke(255);
 			line(this.pos.x, this.pos.y, this.parent.pos.x, this.parent.pos.y);
 		}
 	}
+}
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }

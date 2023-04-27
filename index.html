@@ -1,12 +1,16 @@
 ---
 layout: default
 ---
-{% include navigation.html %}
 
 <div class="home_page">
 
 
     <img class="home_logo" src="../assets/logos/Low Res PNGs/Mycelium_Logo_Final_NoFill_White.png"/>
+
+    <div>
+        <script src="./assets/javascript/tree.js"></script>
+    </div>
+
     {% for student in site.students %}
         {% include assign.html %}
 

@@ -11,15 +11,4 @@ layout: default
         <script src="./assets/javascript/tree.js"></script>
     </div>
 
-    {% for student in site.students %}
-        {% include assign.html %}
-
-        <a href="{{ student_url }}" id="student{{ forloop.index }}">
-            {% if student_displayName %}
-                {{ student_displayName }}
-            {% else %}
-                {{ student_name }}
-            {% endif %}
-        </a>
-    {% endfor %}
 </div>

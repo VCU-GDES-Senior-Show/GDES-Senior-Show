@@ -3,7 +3,7 @@
     align-items: center;
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 60px);
 
     .student_content {
         display: flex;
@@ -18,7 +18,7 @@
             height: 100%;
             position: relative;
 
-            .student_description {
+            .student_description { 
                 height: 75%;
                 position: relative;
                 overflow-y: scroll;

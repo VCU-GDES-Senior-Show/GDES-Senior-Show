@@ -10,12 +10,21 @@ layout: default
     {% for student in site.students %}
         {% include assign.html %}
 
-        <a href="{{ student_url }}" id="student{{ forloop.index }}" class="scattered">
+
+
+
+
+        <a href="{{ student_url }}" id="student{{ forloop.index }}">
             {% if student_displayName %}
                 {{ student_displayName }}
             {% else %}
                 {{ student_name }}
             {% endif %}
         </a>
+
+
+
+
+        
     {% endfor %}
 </div>

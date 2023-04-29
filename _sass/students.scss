@@ -70,20 +70,43 @@
 }
 
 .student_connections {
+    top: 0;
     position: absolute;
-    top: 12px;
+    color: $sand;
 }
 
 #connection1 {
     right: 56%;
+    top: 100px;
 }
 
 #connection2 {
     right: 32%;
+    top: 100px;
 }
 
 #connection3 {
     right: 8%;
+    top: 110px;
+}
+
+#connection4 {
+    top: 100px;
+    left: 8%
+}
+
+#connection5 {
+    top: 30vh;
+    left: 2%;
+}
+
+#connection6 {
+    top: 48vh;
+    left: 4%;
+}
+
+#connection4 {
+    
 }
 
 

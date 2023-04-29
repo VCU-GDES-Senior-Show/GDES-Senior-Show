@@ -1,17 +1,61 @@
 .home_logo {
+    width: 1000px;
+    max-width: 33%;
+    // position: absolute;
+    // top: 5%;
+    // left: 50%;
+    object-fit: contain;
+    // transform: translate(-50%, 0);
+    z-index: 1;
+    // background-color: $green;
+}
+
+.home_info {
+    width: 70%;
+    margin: 0 15%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    object-fit: contain;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.home_branches {
+    width: 1000px;
     max-width: 33%;
     position: absolute;
-    top: 8%;
+    top: 38%;
     left: 50%;
     object-fit: contain;
     transform: translate(-50%, 0);
     z-index: 1;
-    background-color: $green;
+}
+.home_names {
+    width: 70%;
+    margin: 0 15%;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    object-fit: contain;
+    z-index: 1;
+
+    p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
 }
 
-.home_tree {
-    max-height: 50%;
-}
+
+
+
+
+
+
+
 
 #defaultCanvas0 {
     max-height: 50vh;
@@ -25,20 +69,18 @@
     z-index: -1;
 }
 
-
-
-
-
-
 .wrapper{
     min-width: 100vw;
     max-height: 100vh;
-    bottom: 25%;
+    bottom: 0%;
     left: 0%;
     // display: grid;
     // place-items: center;
     position: absolute;
     z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 svg{

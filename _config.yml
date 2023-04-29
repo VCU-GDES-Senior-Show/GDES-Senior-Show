@@ -35,6 +35,7 @@ url:
 twitter_username:
 github_username:
 
+exclude: [node_modules]
 
 plugins:
   - jekyll-feed

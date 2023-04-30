@@ -14,7 +14,7 @@ window.onload = function() {
       var thisDiv = divs[i];
 
       // get random numbers for each element
-      var randomTop = getRandomNumber(0, winHeight - thisDiv.offsetHeight);
+      var randomTop = getRandomNumber(60, winHeight - thisDiv.offsetHeight);
       var randomLeft = getRandomNumber(0, winWidth - thisDiv.offsetWidth);
 
       // check if element overlaps with previously positioned elements
@@ -28,11 +28,16 @@ window.onload = function() {
               pos.left < randomLeft + thisDiv.offsetWidth &&
               pos.left + pos.width > randomLeft) {
             overlap = true;
-            randomTop = getRandomNumber(0, winHeight - thisDiv.offsetHeight);
+            randomTop = getRandomNumber(60, winHeight - thisDiv.offsetHeight);
             randomLeft = getRandomNumber(0, winWidth - thisDiv.offsetWidth);
             break;
           }
         }
+      }
+
+      // adjust top position if necessary to stay within the margin
+      if (randomTop < 60) {
+        randomTop = 60;
       }
 
       // update top and left position

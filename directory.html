@@ -27,7 +27,7 @@ tags:
 
 <div class="directory-intro">
 	<h1>Directory</h1>
-
+	<p>Explore the works of the graphic design students</p>
 
 	<div class="student_tags">
 		<p class="sort">Sort by theme:</p>
@@ -491,5 +491,32 @@ tags:
 			$('#' + tagId + '-word').css('display', 'none');
 		  }
 		);
+	  });
+</script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		// Get all the tag elements
+		var tags = document.querySelectorAll(".tag-word");
+	  
+		// Add click event listener to each tag
+		tags.forEach(function(tag) {
+		  tag.addEventListener("click", function() {
+			var selectedTag = this.id.replace("-word", "");
+	  
+			// Show/hide items based on selected tag
+			var items = document.querySelectorAll(".item");
+			items.forEach(function(item) {
+			  var itemId = item.id;
+			  var itemTag = document.getElementById(itemId).getAttribute("data-tags");
+	  
+			  if (itemTag.includes(selectedTag) || selectedTag === "all") {
+				item.style.display = "block";
+			  } else {
+				item.style.display = "none";
+			  }
+			});
+		  });
+		});
 	  });
 </script>

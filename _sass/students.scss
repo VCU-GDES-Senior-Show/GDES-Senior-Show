@@ -9,15 +9,18 @@
         display: flex;
         justify-content: space-between;
         align-items: space-between;
-        width: 80%;
-        height: 90%;
-        padding: 100px;
+        width: 70%;
+        height: 70%;
         position: relative;
 
         .student_info-container {
             max-width: 45%;
             height: 100%;
             position: relative;
+
+            .student_tags {
+                margin: 16px 0;
+            }
 
             .student_description { 
                 height: 75%;
@@ -66,7 +69,6 @@
                 display: none;
             }
         }  
-
     }
 }
 
@@ -105,29 +107,3 @@
     top: 48vh;
     left: 4%;
 }
-
-#connection4 {
-    
-}
-
-
-        // #image-carousel{
-        //     max-width: 40%;
-        //     height: 75%;
-        // }
-
-        // .splide__slide {
-        //     border-radius: 20px;
-        //     height: 100%;
-        //     display: flex;
-        //     align-items: center;
-
-        //     img {
-        //         display: block;
-        //         margin: auto;
-        //         max-width: 100%;
-        //         height: auto;
-        //         border-radius: 20px;
-        //         object-fit: contain;
-        //     }
-        // }

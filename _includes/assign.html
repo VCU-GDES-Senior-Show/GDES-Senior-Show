@@ -45,6 +45,19 @@
 
 
 
+{% assign student_path_jpg = '/assets/images/' | append: student_id | append: "/" | append: student_id | append: "_image1.jpg" %}
+{% assign student_path_png = '/assets/images/' | append: student_id | append: "/" | append: student_id | append: "_image1.png" %}
+
+{% assign student_image_directory = student_path_jpg %}
+
+
+{% for static_file in site.static_files %}
+    {% if static_file.path contains student_id and static_file.path contains '_image1.png' %}
+        {% assign student_image_directory = student_path_png %}
+    {% endif %}
+{% endfor %}
+
+
 
 
 {% assign student_email     = student.email %}

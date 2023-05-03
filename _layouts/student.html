@@ -35,7 +35,7 @@ layout: default
                 {{ student_name }}
             </h3>
             
-            <p>
+            <p class="student_tags">
                 {%- for tag in student_tag -%}
                     {% assign tag_class = tag | slugify %}
                         <span class="tag {{ tag_class }}">{{ tag }}</span>

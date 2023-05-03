@@ -104,7 +104,7 @@ tags:
 			{% assign remainder = forloop.index0 | modulo: 9 %}
 
 			{% if remainder == 1 %}
-			<div class="item item--style-1" data-animation-path-duration="800" data-animation-path-easing="easeInOutCubic" data-path-elasticity="300" data-morph-path="M 178.197 160.74 C 187.827 100.421 133.772 68.3 181.434 19.484 C 229.096 -29.332 343.424 22.966 381.546 102.078 C 419.668 181.19 406.138 292.093 351.026 348.679 C 295.914 405.265 191.684 423.954 148.763 404.299 C 105.842 384.644 71.251 346.481 84.318 283.423 C 97.385 220.365 158.1 219.38 178.197 160.74 Z" data-path-scaleX="0.8" data-path-scaleY="1.1" data-path-translateX="0" data-path-translateY="30" data-path-rotate="5" data-animation-image-duration="800" data-animation-image-easing="easeInOutQuart" data-image-elasticity="300" data-image-scaleX="1.2" data-image-scaleY="1.2" data-image-translateX="-20" data-image-translateY="-45" data-image-rotate="-5" data-animation-deco-duration="1300" data-animation-deco-easing="easeOutQuad" data-deco-elasticity="300" data-deco-scaleX="0.8" data-deco-scaleY="0.9" data-deco-translateX="-5" data-deco-translateY="-5" data-deco-rotate="2" id="{{ student_id }}">
+			<div class="item {% for tag in student.tags %}{{ tag | slugify }} {% endfor %}item--style-1" data-animation-path-duration="800" data-animation-path-easing="easeInOutCubic" data-path-elasticity="300" data-morph-path="M 178.197 160.74 C 187.827 100.421 133.772 68.3 181.434 19.484 C 229.096 -29.332 343.424 22.966 381.546 102.078 C 419.668 181.19 406.138 292.093 351.026 348.679 C 295.914 405.265 191.684 423.954 148.763 404.299 C 105.842 384.644 71.251 346.481 84.318 283.423 C 97.385 220.365 158.1 219.38 178.197 160.74 Z" data-path-scaleX="0.8" data-path-scaleY="1.1" data-path-translateX="0" data-path-translateY="30" data-path-rotate="5" data-animation-image-duration="800" data-animation-image-easing="easeInOutQuart" data-image-elasticity="300" data-image-scaleX="1.2" data-image-scaleY="1.2" data-image-translateX="-20" data-image-translateY="-45" data-image-rotate="-5" data-animation-deco-duration="1300" data-animation-deco-easing="easeOutQuad" data-deco-elasticity="300" data-deco-scaleX="0.8" data-deco-scaleY="0.9" data-deco-translateX="-5" data-deco-translateY="-5" data-deco-rotate="2" id="{{ student_id }}">
 				
 				<a href="{{ student_url }}">
 				<svg class="item__svg" width="600" height="600" viewBox="0 0 500 500">
@@ -131,7 +131,7 @@ tags:
 
 			{% elsif remainder == 2 %}
 
-			<div class="item item--style-2" data-animation-path-duration="1500" data-animation-path-easing="easeOutElastic" data-morph-path="M 418.1,159.8 C 460.9,222.9 497,321.5 452.4,383.4 417.2,432.4 371.2,405.6 271.3,420.3 137.2,440 90.45,500.6 42.16,442.8 -9.572,381 86.33,289.1 117.7,215.5 144.3,153.4 145.7,54.21 212.7,36.25 290.3,15.36 373.9,94.6 418.1,159.8 Z" data-path-scaleY="1.1" data-image-scaleX="1.3" data-image-scaleY="1.3" data-animation-deco-duration="2000" data-animation-deco-delay="100" data-deco-rotate="-10" id="{{ student_id }}">
+			<div class="item {% for tag in student.tags %}{{ tag | slugify }} {% endfor %}item--style-2" data-animation-path-duration="1500" data-animation-path-easing="easeOutElastic" data-morph-path="M 418.1,159.8 C 460.9,222.9 497,321.5 452.4,383.4 417.2,432.4 371.2,405.6 271.3,420.3 137.2,440 90.45,500.6 42.16,442.8 -9.572,381 86.33,289.1 117.7,215.5 144.3,153.4 145.7,54.21 212.7,36.25 290.3,15.36 373.9,94.6 418.1,159.8 Z" data-path-scaleY="1.1" data-image-scaleX="1.3" data-image-scaleY="1.3" data-animation-deco-duration="2000" data-animation-deco-delay="100" data-deco-rotate="-10" id="{{ student_id }}">
 				<a href="{{ student_url }}">
 				<svg class="item__svg" width="500px" height="500px" viewBox="0 0 500 500">
 					<clipPath id="clipShape{{ forloop.index0 }}">
@@ -156,7 +156,7 @@ tags:
 
 			{% elsif remainder == 3 %}
 
-			<div class="item item--style-3" data-animation-path-duration="2000" data-path-elasticity="500" data-morph-path="M 77.6 412.63 C 10.894 383.334 38.79 278.232 71.401 221.688 C 104.012 165.144 162.442 152.208 243.023 156.652 C 323.604 161.097 436.618 174.266 436.862 310.793 C 436.99 382.685 406.047 400.677 365.415 398.068 C 318.623 395.064 291.897 359.839 252.865 355.471 C 179.609 347.272 156.887 447.451 77.6 412.63 Z" data-path-translateY="-20" data-animation-image-duration="1000" data-animation-image-easing="easeOutQuint" data-image-rotate="15" data-image-scaleX="0.8" data-image-scaleY="0.8" data-animation-deco-duration="2000" data-animation-deco-easing="easeOutElastic" data-deco-scaleX="0.7" data-deco-rotate="-10" id="{{ student_id }}">
+			<div class="item {% for tag in student.tags %}{{ tag | slugify }} {% endfor %}item--style-3" data-animation-path-duration="2000" data-path-elasticity="500" data-morph-path="M 77.6 412.63 C 10.894 383.334 38.79 278.232 71.401 221.688 C 104.012 165.144 162.442 152.208 243.023 156.652 C 323.604 161.097 436.618 174.266 436.862 310.793 C 436.99 382.685 406.047 400.677 365.415 398.068 C 318.623 395.064 291.897 359.839 252.865 355.471 C 179.609 347.272 156.887 447.451 77.6 412.63 Z" data-path-translateY="-20" data-animation-image-duration="1000" data-animation-image-easing="easeOutQuint" data-image-rotate="15" data-image-scaleX="0.8" data-image-scaleY="0.8" data-animation-deco-duration="2000" data-animation-deco-easing="easeOutElastic" data-deco-scaleX="0.7" data-deco-rotate="-10" id="{{ student_id }}">
 
 				<a href="{{ student_url }}">
 				<svg class="item__svg" width="500px" height="500px" viewBox="0 0 500 500">
@@ -183,7 +183,7 @@ tags:
 
 			{% elsif remainder == 4 %}
 
-			<div class="item item--style-4" data-animation-path-duration="1700" data-animation-path-easing="easeInOutBack" data-morph-path="M 440.9,118.5 C 486.5,189.8 499,297.9 458.3,371.8 422.2,437.2 335.8,475.1 261.5,477.3 181.4,479.6 83.9,445.4 43.22,376.1 -0.2483,302.1 13.51,189.9 61.98,119.1 104.5,56.88 190.6,20.5 265.7,22.71 332.2,24.67 405,62.28 440.9,118.5 Z" data-path-translateY="-20" data-animation-image-duration="2000" data-animation-image-easing="easeInOutQuart" data-image-translateY="40" data-image-scaleX="1.3" data-image-scaleY="1.3" data-deco-scaleX="0.8" data-deco-scaleY="1.3" id="{{ student_id }}">
+			<div class="item {% for tag in student.tags %}{{ tag | slugify }} {% endfor %}item--style-4" data-animation-path-duration="1700" data-animation-path-easing="easeInOutBack" data-morph-path="M 440.9,118.5 C 486.5,189.8 499,297.9 458.3,371.8 422.2,437.2 335.8,475.1 261.5,477.3 181.4,479.6 83.9,445.4 43.22,376.1 -0.2483,302.1 13.51,189.9 61.98,119.1 104.5,56.88 190.6,20.5 265.7,22.71 332.2,24.67 405,62.28 440.9,118.5 Z" data-path-translateY="-20" data-animation-image-duration="2000" data-animation-image-easing="easeInOutQuart" data-image-translateY="40" data-image-scaleX="1.3" data-image-scaleY="1.3" data-deco-scaleX="0.8" data-deco-scaleY="1.3" id="{{ student_id }}">
 
 				<a href="{{ student_url }}">
 				<svg class="item__svg" width="500px" height="500px" viewBox="0 0 500 500">
@@ -210,7 +210,7 @@ tags:
 
 			{% elsif remainder == 5 %}
 
-			<div class="item item--style-5" data-animation-path-duration="3000" data-animation-path-easing="easeInOutQuint" data-path-rotate="90" data-morph-path="M 368.1,46.42 C 461,96.69 473.7,266.2 422.3,358.4 379.1,436 259.6,484.8 175,457.5 107.5,435.7 12.65,329.8 60.93,277.7 95.18,240.8 154,379.3 194.2,348.9 250.7,306 116,204.1 148.4,140.9 184.8,70.02 298,8.455 368.1,46.42 Z" data-animation-image-duration="3000" data-animation-image-easing="easeInOutQuint" data-image-rotate="-30"  data-animation-deco-duration="3000" data-animation-deco-easing="easeOutQuint" id="{{ student_id }}">
+			<div class="item {% for tag in student.tags %}{{ tag | slugify }} {% endfor %}item--style-5" data-animation-path-duration="3000" data-animation-path-easing="easeInOutQuint" data-path-rotate="90" data-morph-path="M 368.1,46.42 C 461,96.69 473.7,266.2 422.3,358.4 379.1,436 259.6,484.8 175,457.5 107.5,435.7 12.65,329.8 60.93,277.7 95.18,240.8 154,379.3 194.2,348.9 250.7,306 116,204.1 148.4,140.9 184.8,70.02 298,8.455 368.1,46.42 Z" data-animation-image-duration="3000" data-animation-image-easing="easeInOutQuint" data-image-rotate="-30"  data-animation-deco-duration="3000" data-animation-deco-easing="easeOutQuint" id="{{ student_id }}">
 
 				<a href="{{ student_url }}">
 				<svg class="item__svg" width="500px" height="500px" viewBox="0 0 500 500">
@@ -236,7 +236,7 @@ tags:
 
 			{% elsif remainder == 6 %}
 
-			<div class="item item--style-6" data-animation-path-duration="2000" data-path-scaleX="0.8" data-path-scaleY="0.8" data-path-rotate="25" data-morph-path="M 233.913 431.963 C 153.448 451.139 112.344 396.335 89.263 341.304 C 69.814 294.937 58.799 241.038 93.779 158.723 C 120.65 95.494 194.08 66.871 224.605 62.397 C 301.525 51.124 283.84 112.975 346.317 151.898 C 400.985 185.957 477.648 191.51 449.235 253.784 C 423.458 310.284 404.055 295.208 356.972 335.098 C 293.523 388.854 314.755 412.698 233.913 431.963 Z" data-animation-image-duration="3000" data-animation-image-easing="easeInOutQuint" data-image-translateY="-10" data-image-scaleX="0.9" data-image-scaleY="0.9" id="{{ student_id }}">
+			<div class="item {% for tag in student.tags %}{{ tag | slugify }} {% endfor %}item--style-6" data-animation-path-duration="2000" data-path-scaleX="0.8" data-path-scaleY="0.8" data-path-rotate="25" data-morph-path="M 233.913 431.963 C 153.448 451.139 112.344 396.335 89.263 341.304 C 69.814 294.937 58.799 241.038 93.779 158.723 C 120.65 95.494 194.08 66.871 224.605 62.397 C 301.525 51.124 283.84 112.975 346.317 151.898 C 400.985 185.957 477.648 191.51 449.235 253.784 C 423.458 310.284 404.055 295.208 356.972 335.098 C 293.523 388.854 314.755 412.698 233.913 431.963 Z" data-animation-image-duration="3000" data-animation-image-easing="easeInOutQuint" data-image-translateY="-10" data-image-scaleX="0.9" data-image-scaleY="0.9" id="{{ student_id }}">
 
 				<a href="{{ student_url }}">
 				<svg class="item__svg" width="500px" height="500px" viewBox="0 0 500 500">
@@ -262,7 +262,7 @@ tags:
 
 			{% elsif remainder == 7 %}
 
-			<div class="item item--style-7" data-animation-path-duration="2000" data-animation-path-easing="easeOutExpo" data-path-rotate="10" data-path-scaleX="0.5" data-morph-path="M 204.188 459.896 C 108.389 411.195 234.836 323.571 237.865 258.79 C 240.896 194.009 116.963 160.914 169.475 82.971 C 221.986 5.028 380.743 39.727 462.103 96.863 C 557.978 164.191 552.354 219.433 551.296 262.257 C 549.856 320.534 504.924 386.276 458.065 420.526 C 385.568 473.515 288.365 502.689 204.188 459.896 Z" data-animation-image-duration="2000" data-animation-image-easing="easeOutCubic" data-image-rotate="5" data-animation-deco-duration="2000" data-animation-deco-easing="easeOutExpo" data-deco-scaleX="0.7" data-deco-translateX="-100" data-deco-translateY="-100" data-deco-rotate="50" id="{{ student_id }}">
+			<div class="item {% for tag in student.tags %}{{ tag | slugify }} {% endfor %}item--style-7" data-animation-path-duration="2000" data-animation-path-easing="easeOutExpo" data-path-rotate="10" data-path-scaleX="0.5" data-morph-path="M 204.188 459.896 C 108.389 411.195 234.836 323.571 237.865 258.79 C 240.896 194.009 116.963 160.914 169.475 82.971 C 221.986 5.028 380.743 39.727 462.103 96.863 C 557.978 164.191 552.354 219.433 551.296 262.257 C 549.856 320.534 504.924 386.276 458.065 420.526 C 385.568 473.515 288.365 502.689 204.188 459.896 Z" data-animation-image-duration="2000" data-animation-image-easing="easeOutCubic" data-image-rotate="5" data-animation-deco-duration="2000" data-animation-deco-easing="easeOutExpo" data-deco-scaleX="0.7" data-deco-translateX="-100" data-deco-translateY="-100" data-deco-rotate="50" id="{{ student_id }}">
 
 				<a href="{{ student_url }}">
 				<svg class="item__svg" width="500px" height="500px" viewBox="0 0 500 500">
@@ -289,7 +289,7 @@ tags:
 
 			{% elsif remainder == 8 %}
 
-			<div class="item item--style-8" data-animation-path-duration="2000" data-animation-path-easing="easeInOutQuart" data-morph-path="M 47.99,295.7 C 44.25,252.9 72.33,195.7 110.4,167 169.6,122.4 259,106.1 329.6,128.8 381.3,145.4 428,193 443.7,245 453.3,277 464.9,322.4 424.6,343.5 369,372.7 304.2,310.1 239.1,319 190.9,325.5 153,380 107.6,373.4 64.97,367.3 50.68,326.4 47.99,295.7 Z" data-path-scaleX="1.1" data-path-scaleY="1.1" data-animation-image-duration="2300" data-animation-image-easing="easeInOutQuart" data-image-scaleX=".9" data-image-scaleY=".9" data-image-translateY="-100" data-animation-deco-duration="2000" data-animation-deco-easing="easeInOutQuart" data-deco-scaleX="1.1" data-deco-scaleY="1.1" data-deco-rotate="-15" id="{{ student_id }}">
+			<div class="item {% for tag in student.tags %}{{ tag | slugify }} {% endfor %}item--style-8" data-animation-path-duration="2000" data-animation-path-easing="easeInOutQuart" data-morph-path="M 47.99,295.7 C 44.25,252.9 72.33,195.7 110.4,167 169.6,122.4 259,106.1 329.6,128.8 381.3,145.4 428,193 443.7,245 453.3,277 464.9,322.4 424.6,343.5 369,372.7 304.2,310.1 239.1,319 190.9,325.5 153,380 107.6,373.4 64.97,367.3 50.68,326.4 47.99,295.7 Z" data-path-scaleX="1.1" data-path-scaleY="1.1" data-animation-image-duration="2300" data-animation-image-easing="easeInOutQuart" data-image-scaleX=".9" data-image-scaleY=".9" data-image-translateY="-100" data-animation-deco-duration="2000" data-animation-deco-easing="easeInOutQuart" data-deco-scaleX="1.1" data-deco-scaleY="1.1" data-deco-rotate="-15" id="{{ student_id }}">
 
 				<a href="{{ student_url }}">
 				<svg class="item__svg" width="500px" height="500px" viewBox="0 0 500 500">
@@ -315,7 +315,7 @@ tags:
 
 
 			{% else %}
-			<div class="item item--style-9" data-animation-path-duration="2400" data-animation-path-easing="easeInOutQuint" data-morph-path="M 126.996 384.477 C 75.937 275.127 176.863 265.902 106.77 144.618 C 56.853 58.245 132.99 26.828 213.709 102.956 C 271.051 157.037 389.357 -17.596 422.017 72.863 C 435.433 110.023 355.419 189.862 390.638 265.258 C 410.784 308.386 497.75 375.407 432.274 433.95 C 366.8 492.491 178.055 493.827 126.996 384.477 Z" data-animation-image-duration="4000" data-image-rotate="-15"  data-animation-deco-duration="2400" data-animation-deco-easing="easeInOutQuint" id="{{ student_id }}">
+			<div class="item {% for tag in student.tags %}{{ tag | slugify }} {% endfor %}item--style-9" data-animation-path-duration="2400" data-animation-path-easing="easeInOutQuint" data-morph-path="M 126.996 384.477 C 75.937 275.127 176.863 265.902 106.77 144.618 C 56.853 58.245 132.99 26.828 213.709 102.956 C 271.051 157.037 389.357 -17.596 422.017 72.863 C 435.433 110.023 355.419 189.862 390.638 265.258 C 410.784 308.386 497.75 375.407 432.274 433.95 C 366.8 492.491 178.055 493.827 126.996 384.477 Z" data-animation-image-duration="4000" data-image-rotate="-15"  data-animation-deco-duration="2400" data-animation-deco-easing="easeInOutQuint" id="{{ student_id }}">
 
 				<a href="{{ student_url }}">
 				<svg class="item__svg" width="500px" height="500px" viewBox="0 0 500 500">
@@ -481,42 +481,68 @@ tags:
 
 <script>
 	$(document).ready(function() {
-		$('.tag').hover(
-		  function() {
-			const tagId = $(this).attr('id');
-			$('#' + tagId + '-word').css('display', 'block');
-		  },
-		  function() {
-			const tagId = $(this).attr('id');
+	  $('.tag').hover(
+		function() {
+		  const tagId = $(this).attr('id');
+		  $('#' + tagId + '-word').css('display', 'block');
+		},
+		function() {
+		  const tagId = $(this).attr('id');
+		  if (!$(this).hasClass('selected')) {
 			$('#' + tagId + '-word').css('display', 'none');
 		  }
-		);
-	  });
-</script>
-
-<script>
-	document.addEventListener("DOMContentLoaded", function() {
-		// Get all the tag elements
-		var tags = document.querySelectorAll(".tag-word");
-	  
-		// Add click event listener to each tag
-		tags.forEach(function(tag) {
-		  tag.addEventListener("click", function() {
-			var selectedTag = this.id.replace("-word", "");
-	  
-			// Show/hide items based on selected tag
-			var items = document.querySelectorAll(".item");
-			items.forEach(function(item) {
-			  var itemId = item.id;
-			  var itemTag = document.getElementById(itemId).getAttribute("data-tags");
-	  
-			  if (itemTag.includes(selectedTag) || selectedTag === "all") {
-				item.style.display = "block";
-			  } else {
-				item.style.display = "none";
-			  }
-			});
-		  });
+		}
+	  );
+  
+	  // Get all the tag elements
+	  var tags = document.getElementsByClassName("tag");
+  
+	  // Attach click event listener to each tag
+	  for (var i = 0; i < tags.length; i++) {
+		tags[i].addEventListener("click", function () {
+		  var tagId = this.id; // Get the ID of the clicked tag
+		  var items = document.getElementsByClassName("item"); // Get all the item elements
+  
+		  // Loop through each item and check if it has the same class as the clicked tag
+		  for (var j = 0; j < items.length; j++) {
+			if (items[j].classList.contains(tagId)) {
+			  items[j].style.display = "block"; // Show the item
+			} else {
+			  items[j].style.display = "none"; // Hide the item
+			}
+		  }
+  
+		  var tagSpans = document.getElementsByClassName("tag"); // Get all the tag span elements
+  
+		  // Remove selected class from all tag spans
+		  for (var k = 0; k < tagSpans.length; k++) {
+			tagSpans[k].classList.remove("selected");
+			var tagWordId = tagSpans[k].id + "-word"; // Get the corresponding tag word ID
+			if (tagSpans[k] !== this && !tagSpans[k].classList.contains('hovered')) {
+			  // Check if the tag span is not the clicked one and not being hovered
+			  document.getElementById(tagWordId).style.display = "none"; // Hide the tag word
+			}
+		  }
+  
+		  // Add selected class to the clicked tag span
+		  this.classList.add("selected");
+		  var clickedTagWordId = tagId + "-word"; // Get the ID of the clicked tag word
+		  document.getElementById(clickedTagWordId).style.display = "block"; // Show the clicked tag word
 		});
-	  });
-</script>
+  
+		// Attach hover event listener to each tag
+		tags[i].addEventListener("mouseenter", function () {
+		  this.classList.add("hovered");
+		});
+  
+		tags[i].addEventListener("mouseleave", function () {
+		  this.classList.remove("hovered");
+		  if (!this.classList.contains("selected")) {
+			var tagWordId = this.id + "-word";
+			document.getElementById(tagWordId).style.display = "none";
+		  }
+		});
+	  }
+	});
+  </script>
+  

@@ -18,53 +18,93 @@ layout: default
 
 
 
+<div class="student_content">
+    <div class="student_info-container">
+        
 
+        <h2 class="student_projectName">{{ student_projectName }}</h2>
 
+        <h3 class="student_name">{{ student_name }}</h3>
+        
+        <div class="student_tags">
+            {%- for tag in student_tag -%}
+                {% assign tag_class = tag | slugify %}
 
+                <span class="tag {{ tag_class }}">   
 
+                {% if tag contains "Communication" %}
+                    <img class="tag-icon" src="../assets/icons/small/Communication.png"/>
+                {% elsif tag contains "Culture" %}
+                    <img class="tag-icon" src="../assets/icons/small/Culture.png"/>
+                {% elsif tag contains "Emotion" %}
+                    <img class="tag-icon" src="../assets/icons/small/Emotions.png"/>
+                {% elsif tag contains "Environment" %}
+                    <img class="tag-icon" src="../assets/icons/small/Environment.png"/>
+                {% elsif tag contains "Family" %}
+                    <img class="tag-icon" src="../assets/icons/small/Family.png"/>
+                {% elsif tag contains "Fashion" %}
+                    <img class="tag-icon" src="../assets/icons/small/Fashion.png"/>
+                {% elsif tag contains "Food" %}
+                    <img class="tag-icon" src="../assets/icons/small/Food.png"/>
+                {% elsif tag contains "History" %}
+                    <img class="tag-icon" src="../assets/icons/small/History.png"/>
+                {% elsif tag contains "Identity" %}
+                    <img class="tag-icon" src="../assets/icons/small/Identity.png"/>
+                {% elsif tag contains "Love" %}
+                    <img class="tag-icon" src="../assets/icons/small/Love.png"/>
+                {% elsif tag contains "Memory" %}
+                    <img class="tag-icon" src="../assets/icons/small/Memory.png"/>
+                {% elsif tag contains "Movement" %}
+                    <img class="tag-icon" src="../assets/icons/small/Movement.png"/>
+                {% elsif tag contains "Music" %}
+                    <img class="tag-icon" src="../assets/icons/small/Music.png"/>
+                {% elsif tag contains "Nostalgia" %}
+                    <img class="tag-icon" src="../assets/icons/small/Nostalgia.png"/>
+                {% elsif tag contains "Other" %}
+                    <img class="tag-icon" src="../assets/icons/small/Other.png"/>
+                {% elsif tag contains "Relationship" %}
+                    <img class="tag-icon" src="../assets/icons/small/Relationships.png"/>
+                {% elsif tag contains "Spirituality" %}
+                    <img class="tag-icon" src="../assets/icons/small/Spirituality.png"/>
+                {% elsif tag contains "Sports" %}
+                    <img class="tag-icon" src="../assets/icons/small/Sports.png"/>
+                {% elsif tag contains "Typography" %}
+                    <img class="tag-icon" src="../assets/icons/small/Typography.png"/>
+                {% elsif tag contains "World Building" %}
+                    <img class="tag-icon" src="../assets/icons/small/Worldbuilding.png"/>
+                {% endif %}
+                
+                <span class="tag-word">{{ tag }}</span></span>
+            {%- endfor -%}
+        </div>
+        
+        <p class="student_projectDesc">{{ student_projectDesc }}</p>
 
+        <a class="student_email" href="mailto:{{student_email}}" target="_blank">{{ student_email }}</a>
 
+        <br>
 
-    <div class="student_content">
-        <section class="student_info-container">
-            
+        <a class="student_website" href="{{student_websiteLink}}" target="_blank">{{ student_website }}</a>
+        
+        <br>
 
-            <h2 class="student_projectName">{{ student_projectName }}</h2>
-
-            <h3 class="student_name">
-                {{ student_name }}
-            </h3>
-            
-            <p class="student_tags">
-                {%- for tag in student_tag -%}
-                    {% assign tag_class = tag | slugify %}
-                        <span class="tag {{ tag_class }}">{{ tag }}</span>
-                {%- endfor -%}
-            </p>
-            
-            <div class="student_description">
-                <p class="student_projectDesc">{{ student_projectDesc }}</p>
-            </div>
-            
-
-            <a class="student_email" href="mailto:{{student_email}}" target="_blank">{{ student_email }}</a>
-            <br>
-            <a class="student_website" href="{{student_websiteLink}}" target="_blank">{{ student_website }}</a>
-            <br>
+        {% if student.instagram %}
             <a class="student_insta" href="{{student_instagramLink}}" target="_blank">@{{ student_instagram }}</a>
             <br>
-            <a class="student_website" href="{{student_socials}}" target="_blank">{{ student_socials }}</a>
-        </section>
+        {% endif %}
 
-        <section class="student_image-container">
-            <img data-enlargable src="{{ student_image1 }}">
-            <img data-enlargable src="{{ student_image2 }}">
-
-            {% if student_image3 != "" %}
-                <img data-enlargable src="{{ student_image3 }}">
-            {% endif %}
-        </section>
+        <a class="student_website" href="{{student_socials}}" target="_blank">{{ student_socials }}</a>
     </div>
+
+    <div class="student_image-container">
+        <div><img data-enlargable src="{{ student_image1 }}"></div>
+        <div><img data-enlargable src="{{ student_image2 }}"></div>
+
+        {% if student_image3 != "" %}
+        <div><img data-enlargable src="{{ student_image3 }}"></div>
+        {% endif %}
+    </div>
+</div>
 
 
 
@@ -85,8 +125,69 @@ layout: default
     {% endfor %}
 
     {% if student != page and common_tags != "" %}
-        <a class="student_connections" id="connection{{counter}}" href="{{ student.url }}">
-            {{ student_projectName }}
+        <a class="student_connections tag" id="connection{{counter}}" href="{{ student.url }}">
+        {% if common_tags contains "Communication" %}
+            <img class="tag-icon" src="../assets/icons/small/Communication.png"/>
+        {% endif %}
+		{% if common_tags contains "Culture" %}
+            <img class="tag-icon" src="../assets/icons/small/Culture.png"/>
+        {% endif %}
+		{% if common_tags contains "Emotion" %}
+            <img class="tag-icon" src="../assets/icons/small/Emotions.png"/>
+        {% endif %}
+		{% if common_tags contains "Environment" %}
+            <img class="tag-icon" src="../assets/icons/small/Environment.png"/>
+        {% endif %}
+		{% if common_tags contains "Family" %}
+            <img class="tag-icon" src="../assets/icons/small/Family.png"/>
+        {% endif %}
+		{% if common_tags contains "Fashion" %}
+            <img class="tag-icon" src="../assets/icons/small/Fashion.png"/>
+        {% endif %}
+		{% if common_tags contains "Food" %}
+            <img class="tag-icon" src="../assets/icons/small/Food.png"/>
+        {% endif %}
+		{% if common_tags contains "History" %}
+            <img class="tag-icon" src="../assets/icons/small/History.png"/>
+        {% endif %}
+		{% if common_tags contains "Identity" %}
+            <img class="tag-icon" src="../assets/icons/small/Identity.png"/>
+        {% endif %}
+		{% if common_tags contains "Love" %}
+            <img class="tag-icon" src="../assets/icons/small/Love.png"/>
+        {% endif %}
+		{% if common_tags contains "Memory" %}
+            <img class="tag-icon" src="../assets/icons/small/Memory.png"/>
+        {% endif %}
+		{% if common_tags contains "Movement" %}
+            <img class="tag-icon" src="../assets/icons/small/Movement.png"/>
+        {% endif %}
+		{% if common_tags contains "Music" %}
+            <img class="tag-icon" src="../assets/icons/small/Music.png"/>
+        {% endif %}
+		{% if common_tags contains "Nostalgia" %}
+            <img class="tag-icon" src="../assets/icons/small/Nostalgia.png"/>
+        {% endif %}
+		{% if common_tags contains "Other" %}
+            <img class="tag-icon" src="../assets/icons/small/Other.png"/>
+        {% endif %}
+		{% if common_tags contains "Relationship" %}
+            <img class="tag-icon" src="../assets/icons/small/Relationships.png"/>
+        {% endif %}
+		{% if common_tags contains "Spirituality" %}
+            <img class="tag-icon" src="../assets/icons/small/Spirituality.png"/>
+        {% endif %}
+		{% if common_tags contains "Sports" %}
+            <img class="tag-icon" src="../assets/icons/small/Sports.png"/>
+        {% endif %}
+		{% if common_tags contains "Typography" %}
+            <img class="tag-icon" src="../assets/icons/small/Typography.png"/>
+        {% endif %}
+		{% if common_tags contains "World Building" %}
+            <img class="tag-icon" src="../assets/icons/small/Worldbuilding.png"/>
+        {% endif %}
+            
+            <!-- {{ student_projectName }} -->
         </a>
         {% assign counter = counter | plus: 1 %}
     {% endif %}
@@ -120,3 +221,4 @@ layout: default
     });
 
 </script>
+<script src="../assets/javascript/carousel.js"></script>

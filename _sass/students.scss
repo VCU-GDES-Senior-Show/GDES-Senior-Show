@@ -1,66 +1,62 @@
 .student_page {
-    justify-content: center;
-    align-items: center;
-    display: flex;
     width: 100vw;
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
+    padding: 15vh 15vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 
     .student_content {
+        max-width: 70vw;
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: space-between;
-        width: 70vw;
-        height: 70%;
-        position: relative;
 
         .student_info-container {
+            min-width: 400px;
             max-width: 45%;
             height: 100%;
             position: relative;
 
             .student_tags {
-                margin: 16px 0;
+                margin: 16px 0 12px 0;
+                display: flex;
+                flex-wrap: wrap;
             }
-
-            .student_description { 
-                height: 75%;
+            
+            .student_projectDesc { 
                 position: relative;
-                overflow-y: scroll;
                 text-align: left;
-
-                &::-webkit-scrollbar {
-                    width: 8px; 
-                    background-color: $white; 
-                    position: absolute;
-                    left: 0; 
-
-                    display: none;
-                }
-
-                &::-webkit-scrollbar-thumb {
-                    background-color: $white; 
-                    border-radius: 4px;
-                }
-
-                &::-webkit-scrollbar-track {
-                    background-color: $green; 
-                }
             }
         }
 
         .student_image-container {
+            border-radius: 20px;
             max-width: 45%;
             height: 100%;
-            overflow-y: scroll;
-            border-radius: 20px;
-            gap: 20px;
             position: relative;
-
+        
+        
+            .slick-list {
+                border-radius: 20px;
+                min-width: 100%;
+                display: flex;
+                align-items: center;
+            }
+        
+            .slick-track {
+                display: flex;
+                align-items: center;
+            }
+            
             img {
+                border-radius: 20px;
                 width: 100%;
                 max-width: 100%;
+                padding: 4px;
                 object-fit: contain;
-                border-radius: 20px;
             }
 
             &:hover {
@@ -74,38 +70,93 @@
     }
 }
 
+
+
+
 .student_connections {
-    top: 0;
+    color: $white;
+    background: $dark-green;
+    padding: 4px 0 4px 8px;
     position: absolute;
-    color: $sand;
+    transform: translate(-50%, -50%);
+
+    .tag-icon {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(7492%) hue-rotate(344deg) brightness(112%) contrast(107%);
+    }
+
 }
 
 #connection1 {
-    right: 56%;
-    top: 100px;
+    left: 18%;
+    top: 7%;
 }
 
 #connection2 {
-    right: 32%;
-    top: 100px;
+    left: 32%;
+    bottom: 3%;
 }
 
 #connection3 {
-    right: 8%;
-    top: 110px;
+    right: 6%;
+    top: 10%;
 }
 
 #connection4 {
-    top: 100px;
-    left: 8%
+    top: 48%;
+    left: 3%;
 }
 
 #connection5 {
-    top: 30vh;
-    left: 2%;
+    bottom: 6%;
+    right: 20%;
 }
 
 #connection6 {
-    top: 48vh;
+    top: 30%;
+    right: 2%;
+}
+
+#connection7 {
+    top: 0%;
+    left: 4%;
+}
+
+#connection8 {
+    top: 0%;
+    left: 4%;
+}
+
+#connection9 {
+    top: 0%;
+    left: 4%;
+}
+
+#connection10 {
+    top: 0%;
+    left: 4%;
+}
+
+#connection11 {
+    top: 0%;
+    left: 4%;
+}
+
+#connection12 {
+    top: 0%;
+    left: 4%;
+}
+
+#connection13 {
+    top: 0%;
+    left: 4%;
+}
+
+#connection14 {
+    top: 0%;
+    left: 4%;
+}
+
+#connection15 {
+    top: 0%;
     left: 4%;
 }

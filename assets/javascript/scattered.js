@@ -22,8 +22,8 @@ window.onload = function() {
       // generate random position until it is outside the center box
       var randomTop, randomLeft;
       do {
-        randomTop = getRandomNumber(60, winHeight - thisDiv.offsetHeight);
-        randomLeft = getRandomNumber(0, winWidth - thisDiv.offsetWidth);
+        randomTop = getRandomNumber(80, winHeight - thisDiv.offsetHeight);
+        randomLeft = getRandomNumber(100, winWidth - thisDiv.offsetWidth - 100);
       } while (randomTop > centerBoxTop && randomTop < centerBoxBottom &&
                randomLeft > centerBoxLeft && randomLeft < centerBoxRight);
 
@@ -39,8 +39,8 @@ window.onload = function() {
               pos.left + pos.width > randomLeft) {
             overlap = true;
             do {
-              randomTop = getRandomNumber(60, winHeight - thisDiv.offsetHeight);
-              randomLeft = getRandomNumber(0, winWidth - thisDiv.offsetWidth);
+              randomTop = getRandomNumber(80, winHeight - thisDiv.offsetHeight);
+              randomLeft = getRandomNumber(100, winWidth - thisDiv.offsetWidth - 100);
             } while (randomTop > centerBoxTop && randomTop < centerBoxBottom &&
                      randomLeft > centerBoxLeft && randomLeft < centerBoxRight);
             break;
@@ -49,8 +49,8 @@ window.onload = function() {
       }
 
       // adjust top position if necessary to stay within the margin
-      if (randomTop < 60) {
-        randomTop = 60;
+      if (randomTop < 80) {
+        randomTop = 80;
       }
 
       // update top and left position

@@ -5,6 +5,12 @@ window.onload = function() {
   var winWidth = window.innerWidth;
   var winHeight = window.innerHeight;
 
+  // calculate boundaries of center box
+  var centerBoxTop = (winHeight - 400) / 2;
+  var centerBoxLeft = (winWidth - 600) / 2;
+  var centerBoxBottom = centerBoxTop + 400;
+  var centerBoxRight = centerBoxLeft + 600;
+
   // array to keep track of previously positioned elements
   var positions = [];
 
@@ -13,9 +19,13 @@ window.onload = function() {
       // shortcut! the current div in the list
       var thisDiv = divs[i];
 
-      // get random numbers for each element
-      var randomTop = getRandomNumber(60, winHeight - thisDiv.offsetHeight);
-      var randomLeft = getRandomNumber(0, winWidth - thisDiv.offsetWidth);
+      // generate random position until it is outside the center box
+      var randomTop, randomLeft;
+      do {
+        randomTop = getRandomNumber(60, winHeight - thisDiv.offsetHeight);
+        randomLeft = getRandomNumber(0, winWidth - thisDiv.offsetWidth);
+      } while (randomTop > centerBoxTop && randomTop < centerBoxBottom &&
+               randomLeft > centerBoxLeft && randomLeft < centerBoxRight);
 
       // check if element overlaps with previously positioned elements
       var overlap = true;
@@ -28,8 +38,11 @@ window.onload = function() {
               pos.left < randomLeft + thisDiv.offsetWidth &&
               pos.left + pos.width > randomLeft) {
             overlap = true;
-            randomTop = getRandomNumber(60, winHeight - thisDiv.offsetHeight);
-            randomLeft = getRandomNumber(0, winWidth - thisDiv.offsetWidth);
+            do {
+              randomTop = getRandomNumber(60, winHeight - thisDiv.offsetHeight);
+              randomLeft = getRandomNumber(0, winWidth - thisDiv.offsetWidth);
+            } while (randomTop > centerBoxTop && randomTop < centerBoxBottom &&
+                     randomLeft > centerBoxLeft && randomLeft < centerBoxRight);
             break;
           }
         }
@@ -52,7 +65,6 @@ window.onload = function() {
         height: thisDiv.offsetHeight
       });
   }
-
   // function that returns a random number between a min and max
   function getRandomNumber(min, max) {
       return Math.random() * (max - min) + min;

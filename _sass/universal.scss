@@ -9,6 +9,22 @@
 html {
     max-width: 100vw;
     min-height: 100vh;
+
+    &::-webkit-scrollbar {
+        background: $white; 
+        width: 8px; 
+
+        display: none;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: $pale-green; 
+        border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: $dark-green; 
+    }
 }
 
 .default-container {
@@ -78,7 +94,12 @@ a {
     .tag-icon  {
         max-width: 20px;
         max-height: 20px;
-        margin-right: 8px;
         object-fit: contain;
+        filter: brightness(0) saturate(100%) invert(23%) sepia(11%) saturate(5377%) hue-rotate(116deg) brightness(95%) contrast(101%);
+    }
+
+    .tag-word {
+        margin-left: 8px;
     }
 }
+

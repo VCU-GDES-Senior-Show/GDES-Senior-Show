@@ -97,8 +97,13 @@ layout: default
     </div>
 
     <div class="student_image-container">
+        {% if student_image1 != "" %}
         <div><img data-enlargable src="{{ student_image1 }}"></div>
+        {% endif %}
+
+        {% if student_image2 != "" %}
         <div><img data-enlargable src="{{ student_image2 }}"></div>
+        {% endif %}
 
         {% if student_image3 != "" %}
         <div><img data-enlargable src="{{ student_image3 }}"></div>

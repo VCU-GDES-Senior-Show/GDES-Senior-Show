@@ -26,6 +26,14 @@
     position: relative;
     max-width: 70vw;
     margin: 12vh auto 8vh auto;
+
+	h1 {
+		margin-bottom: 12px;
+	}
+
+	.description {
+		margin: 20px 0;
+	}
   
     .student_tags {
       position: relative;
@@ -48,6 +56,8 @@
 			left: 160px;
 			display: none;
 			white-space: nowrap;
+			background: $green;
+			width: 400px;
 
 		}
 	
@@ -122,13 +132,14 @@ main {
 
 .content--grid {
 	display: flex;
-	flex-basis: 40%;
+	justify-content: center;
 	flex-wrap: wrap;
-	gap: 80px;
+	gap: 60px;
 	padding: 4vh 4vw 12vh 4vw;
 }
 
 .item {
+	flex-basis: 22%;
 	position: relative;
 	width: 400px;
 	max-width: 80%;
@@ -199,6 +210,8 @@ div .item .item--style-6 {
 /* Individual styles */
 .item--style-1 {
 	bottom: random($limit: 120) + px;
+	left: random($limit: 40) + px;
+
 
 	&:nth-child(2) {
 		bottom: random($limit: 40) + px;

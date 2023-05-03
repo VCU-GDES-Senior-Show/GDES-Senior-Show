@@ -27,7 +27,7 @@ tags:
 
 <div class="directory-intro">
 	<h1>Directory</h1>
-	<p>Explore the works of the graphic design students</p>
+	<!-- <p class="description">Explore the senior synthesis projects from the graphic design class of 2023.</p> -->
 
 	<div class="student_tags">
 		<p class="sort">Sort by theme:</p>
@@ -528,6 +528,7 @@ tags:
 		  this.classList.add("selected");
 		  var clickedTagWordId = tagId + "-word"; // Get the ID of the clicked tag word
 		  document.getElementById(clickedTagWordId).style.display = "block"; // Show the clicked tag word
+		  document.getElementById(clickedTagWordId).style.zIndex = "-1"; // Set z-index to -1
 		});
   
 		// Attach hover event listener to each tag
@@ -544,5 +545,9 @@ tags:
 		});
 	  }
 	});
-  </script>
+</script>
+
+
+
+
   

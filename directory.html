@@ -29,11 +29,13 @@ tags:
 	<h1>Directory</h1>
 
 
-	<p class="student_tags">
+	<div class="student_tags">
+		<p class="sort">Sort by theme:</p>
 	{%- for tag in page.tags -%}
-		{% assign tag_class = tag | slugify %}
-		<span class="tag {{ tag_class }}">
-			{% if tag contains "Communication" %}
+		<p class="tag-word" id="{{ tag | slugify }}-word">{{ tag }}</p>
+
+		<span class="tag" id="{{ tag | slugify }}">
+		{% if tag contains "Communication" %}
 			<img class="tag-icon" src="../assets/icons/small/Communication.png"/>
 		{% elsif tag contains "Culture" %}
 			<img class="tag-icon" src="../assets/icons/small/Culture.png"/>
@@ -74,11 +76,9 @@ tags:
 		{% elsif tag contains "World Building" %}
 			<img class="tag-icon" src="../assets/icons/small/Worldbuilding.png"/>
 		{% endif %}
-			
-			
-			<span class="tag-word">{{ tag }}</span></span>
+		</span>
 	{%- endfor -%}
-	</p>
+	</div>
 </div>
 
 
@@ -477,4 +477,19 @@ tags:
         const init = (() => items.forEach(item => new ImgItem(item)))();
         setTimeout(() => document.body.classList.remove('loading'), 2000);
     };
+</script>
+
+<script>
+	$(document).ready(function() {
+		$('.tag').hover(
+		  function() {
+			const tagId = $(this).attr('id');
+			$('#' + tagId + '-word').css('display', 'block');
+		  },
+		  function() {
+			const tagId = $(this).attr('id');
+			$('#' + tagId + '-word').css('display', 'none');
+		  }
+		);
+	  });
 </script>

@@ -25,9 +25,62 @@
 .directory-intro {
     position: relative;
     max-width: 70vw;
-	margin: 0 auto;
-}
+    margin: 12vh auto 8vh auto;
+  
+    .student_tags {
+    //   max-width: 80%;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+  
+		.sort {
+			position: absolute;
+			top: 2px;
+			font-family: $magneta;
+			font-weight: $magneta_semibold;
+		}
+	
+		.tag-word {
+			font-size: 16px;
+			margin-left: 12px;
+			position: absolute;
+			top: 0;
+			left: 120px;
+			display: none;
+			white-space: nowrap;
 
+		}
+	
+		.tag {
+			position: relative;
+			top: 40px;
+			width: 44px;
+			display: flex;
+			overflow: hidden;
+			transition: ease 0.2s;
+			cursor: pointer;
+
+			img {
+				-drag: none;
+				user-select: none;
+				-moz-user-select: none;
+				-webkit-user-drag: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+	
+			&:hover {
+				background: $yellow;
+
+				.tag-word {
+					display: block;
+				}
+			}
+		}
+    }
+}
+  
+  
 .js .loading::before {
 	content: '';
 	position: fixed;
@@ -220,11 +273,6 @@ div .item .item--style-6 {
 		fill: $dark-green;
 	}
 }
-
-.tag-word {
-    display: none;
-}
-
 
 
 

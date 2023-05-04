@@ -24,6 +24,9 @@
     }
   }
   @media only screen and (max-width: 1035px) {
+    .home_page .home_logo{
+        max-width: 40%;
+    }
     .student_page .student_content {
         max-width: 90vw;
         justify-content: space-evenly;
@@ -33,6 +36,13 @@
     }
   }
   @media only screen and (max-width: 500px) {
+    .home_page .home_logo{
+        max-width: 70%;
+        top: 40%;
+    }
+    .project-button{
+        top: 60%;
+    }
     .student_page .student_content .student_image-container{
         max-width: 70%;
     }

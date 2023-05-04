@@ -3,7 +3,7 @@
     margin: auto;
     padding-left: 10% ;
     padding-right: 10% ;
-    padding-top: 12%;
+    padding-top: 9%;
     top: 10%;
     left: 0;
     object-fit: contain;
@@ -16,13 +16,13 @@
     position: absolute;
 }
 .wrapper {
-    transform: scale(0.53);
+    transform: scale(0.5);
     margin: 0 auto;
     width: 100%;
     height: auto;
     position: absolute;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 @media (max-width:600px) {

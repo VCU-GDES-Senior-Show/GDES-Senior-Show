@@ -47,6 +47,19 @@
 			font-weight: $magneta_semibold;
 			font-size: 24px;
 		}
+
+		.tag-img {
+			width: 8vw;
+			max-width: 100px;
+			height: auto;
+			position: fixed;
+			left: 2vw;
+			top: calc(2vh + 60px);
+			object-fit: contain;
+			z-index: 1000;
+			filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(7492%) hue-rotate(344deg) brightness(112%) contrast(107%);
+			
+		}
 	
 		.tag-word {
 			font-size: 20px;
@@ -58,9 +71,8 @@
 			white-space: nowrap;
 			background: $green;
 			width: 400px;
-
 		}
-	
+
 		.tag {
 			position: relative;
 			top: 40px;
@@ -87,6 +99,21 @@
 				}
 			}
 		}
+
+		#other.tag {
+			display: none;
+		}
+		
+		#reset-button {
+			font-size: 16px;
+			font-family: $articulat-cf;
+			color: $white;
+			position: relative;
+			top: 40px;
+			left: 16px;
+		}
+
+
     }
 }
   
@@ -289,10 +316,6 @@ div .item .item--style-6 {
 	.item__deco {
 		fill: $dark-green;
 	}
-}
-
-#other.tag {
-	display: none;
 }
 
 

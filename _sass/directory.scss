@@ -1,10 +1,5 @@
-.directory_page {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.default-container {
+	position: relative;
 }
 
 .loading {
@@ -23,12 +18,16 @@
 
 
 .directory-intro {
+	max-width: 80vw;
+    margin: 8vh auto;
     position: relative;
-    max-width: 70vw;
-    margin: 12vh auto 8vh auto;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
 
 	h1 {
-		margin-bottom: 12px;
+		margin-bottom: 2vh;
+		z-index: 9999;
 	}
 
 	.description {
@@ -52,13 +51,16 @@
 			width: 8vw;
 			max-width: 100px;
 			height: auto;
+			max-height: 8vh;
 			position: fixed;
-			left: 2vw;
+			right: 2vw;
 			top: calc(2vh + 60px);
+			display: flex;
+			justify-content: flex-end;
 			object-fit: contain;
-			z-index: 1000;
+			z-index: 9999;
 			filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(7492%) hue-rotate(344deg) brightness(112%) contrast(107%);
-			
+			display: none;
 		}
 	
 		.tag-word {
@@ -76,7 +78,8 @@
 		.tag {
 			position: relative;
 			top: 40px;
-			width: 44px;
+			width: auto;
+			height: auto;
 			display: flex;
 			overflow: hidden;
 			transition: ease 0.2s;
@@ -89,6 +92,8 @@
 				-webkit-user-drag: none;
 				-webkit-user-select: none;
 				-ms-user-select: none;
+				max-width: 28px;
+				max-height: 28px;
 			}
 	
 			&:hover {
@@ -109,11 +114,11 @@
 			font-family: $articulat-cf;
 			color: $white;
 			position: relative;
-			top: 40px;
-			left: 16px;
+			top: 45px;
+			left: 8px;
+			display: none;
+			cursor: pointer;
 		}
-
-
     }
 }
   

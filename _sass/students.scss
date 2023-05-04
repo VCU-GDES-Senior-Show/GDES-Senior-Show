@@ -1,10 +1,10 @@
 .student_page {
     width: 100vw;
     min-height: calc(100vh - 60px);
-    padding: 15vh 15vw;
+    padding: 12vh 20vw 12vh 10vw;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
 
     .student_content {
@@ -70,26 +70,123 @@
     }
 }
 
-
-
-
 .student_connections {
     color: $white;
     background: $dark-green;
     padding: 4px 0 4px 8px;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-100%, -50%);
 
     .tag-icon {
         margin-right: 8px;
 
         filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(7492%) hue-rotate(344deg) brightness(112%) contrast(107%);
     }
+    
 }
+
+// .related {
+//     position: absolute;
+//     right: 3%;
+//     top: 12vh;
+// }
+
+// #connection1 {
+//     right: 3%;
+//     top: 13vh;
+// }
+
+// #connection2 {
+//     right: 3%;
+//     top: 15vh;
+// }
+
+// #connection3 {
+//     right: 5%;
+//     top: 17vh;
+// }
+
+// #connection4 {
+//     right: 4%;
+//     top: 220px;
+
+// }
+
+// #connection5 {
+//     right: 3%;
+//     top: 260px;
+
+// }
+
+// #connection6 {
+//     right: 2%;
+//     top: 300px;
+// }
+
+// #connection7 {
+//     right: 5%;
+//     top: 340x;
+// }
+
+// #connection8 {
+//     right: 3%;
+//     top: 380px;
+// }
+
+// #connection9 {
+//     right: 5%;
+//     top: 450px;
+// }
+
+// #connection10 {
+//     right: 3%;
+//     top: 380px;
+// }
+
+// #connection11 {
+//     right: 3%;
+//     top: 380px;
+// }
+
+// #connection12 {
+//     right: 5%;
+//     top: 480px;
+// }
+
+// #connection13 {
+//     right: 3%;
+//     top: 560px;
+// }
+
+// #connection14 {
+//     right: 3%;
+//     top: 520px;
+// }
+
+// #connection15 {
+//     right: 3%;
+//     top: 380px;
+// }
+
+// #connection16, #connection17, #connection18, #connection19, #connection20, #connection21, #connection22, #connection23, #connection24, #connection25 {
+//     display: none;
+// }
+
+
+
+// .student_connections-container {
+//     position: absolute;
+//     right: 2vw;
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     width: 10vw;
+// }
+
 
 
 #connection1 {
-    left: 18%;
+    right: 3%;
     top: 7%;
 }
 
@@ -99,7 +196,7 @@
 }
 
 #connection3 {
-    right: 6%;
+    right: 3%;
     top: 10%;
 }
 

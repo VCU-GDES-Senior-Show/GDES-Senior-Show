@@ -32,7 +32,7 @@ tags:
 
 	<div class="student_tags">
 		<p class="sort">Sort by theme:</p>
-	{%- for tag in page.tags -%}
+		{%- for tag in page.tags -%}
 		<img class="tag-img" id="{{ tag | slugify }}-img" src="../assets/icons/large/{{ tag | slugify }}.png"/>
 		<p class="tag-word" id="{{ tag | slugify }}-word">{{ tag }}</p>
 
@@ -77,9 +77,9 @@ tags:
 			<img class="tag-icon" src="../assets/icons/small/Worldbuilding.png"/>
 		{% endif %}
 		</span>
-	{%- endfor -%}
-	<span id="reset-button">Reset filter</span>
-</div>
+		{%- endfor -%}
+		<p id="reset-button">Reset filter</p>
+	</div>
 </div>
 
 

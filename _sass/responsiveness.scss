@@ -22,6 +22,11 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+
+    .directory-intro {
+      max-width: 70vw;
+    }
   }
   @media only screen and (max-width: 1035px) {
     .home_page .home_logo{
@@ -33,6 +38,28 @@
     }
     .student_page .student_content .student_image-container{
         max-width: 50%;
+    }
+
+
+    .directory-intro {
+      max-width: 70vw;
+      align-items: center;
+      justify-content: center;
+      
+      .student_tags {
+        justify-content: space-evenly;
+        flex-flow: row wrap;
+      }
+
+      .sort {
+        position: absolute;
+        left: 20px;
+      }
+    }
+
+
+    h1 {
+      font-size: 48px;
     }
   }
   @media only screen and (max-width: 500px) {

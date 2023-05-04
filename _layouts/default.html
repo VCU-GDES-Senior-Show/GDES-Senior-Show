@@ -15,9 +15,35 @@
       gtag('config', 'G-BT3C0QZN7L');
     </script>
 
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta itemprop="description" name="description" content="{% if page.projectDesc %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
+    <meta itemprop="description" name="description" content="{% if page.projectDesc %}{{ page.projectDesc | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
+
+
+
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{%if page.name %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}/thumbs/{{ page.image }}" />
+    <meta property="article:published_time" content="{{ page.date }}" />
+    <meta property="og:description" content="{% if page.projectDesc %}{{ page.projectDesc }}{% else %}{{ site.description }}{% endif %}">
+
+
+
+
+    <meta name="twitter:card" content="assets/logos/JPGS/Mycelium_Logo_Mark-02.jpg"/>
+    <meta name="twitter:title" content="{%if page.name %}{{ page.name }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.projectDesc %}{{ page.projectDesc }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:card" content="Mycelium, the expansive and ever-growing underground network of fungi has come to represent much more than its scientific meaning: through four tumultuous and uncertain years of the 2023 Graphic Design Seniors’ undergraduate experience, a network of ideas, designers, and communal identity slowly unfurled.">
+
+
+
+
+
 
     <title>
       {%if page.name %}

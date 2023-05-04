@@ -26,7 +26,7 @@
 	flex-direction: column;
 
 	h1 {
-		margin-bottom: 2vh;
+		margin-bottom: 4vh;
 		z-index: 9999;
 	}
 
@@ -278,7 +278,7 @@ div .item .item--style-6 {
 /* Individual styles */
 .item--style-1 {
 	bottom: random($limit: 120) + px;
-	left: random($limit: 40) + px;
+	// left: random($limit: 40) + px;
 
 
 	&:nth-child(2) {
@@ -355,25 +355,5 @@ div .item .item--style-6 {
 
 	.item__deco {
 		fill: $dark-green;
-	}
-}
-
-
-@media screen and (max-width: 960) {
-
-}
-
-@media screen and (max-width: 600) {
-	.codrops-header__title {
-		font-size: 1em;
-	}
-	.content--grid {
-		padding: 2vh 8vw;
-	}
-	.item__number {
-		font-size: 0.75em;
-	}
-	.item__svg {
-		min-height: 360px;
 	}
 }

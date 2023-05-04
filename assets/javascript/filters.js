@@ -40,7 +40,7 @@ $(document).ready(function() {
       document.getElementById(clickedTagWordId).style.zIndex = "-1"; // Set z-index to -1
 
       // Show the reset button
-      document.getElementById("reset-button").style.display = "inline";
+      document.getElementById("reset-button").style.display = "block";
     });
 
     // Attach hover event listener to each tag
@@ -91,6 +91,6 @@ $(document).ready(function() {
   var selectedTag = document.querySelector(".tag.selected");
   if (selectedTag) {
     // Show the reset button if a tag is initially selected
-    resetButton.style.display = "inline";
+    resetButton.style.display = "block";
   }
 });

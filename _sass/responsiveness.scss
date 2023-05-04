@@ -23,3 +23,17 @@
         transform: translate(-50%, -50%);
     }
   }
+  @media only screen and (max-width: 1035px) {
+    .student_page .student_content {
+        max-width: 90vw;
+        justify-content: space-evenly;
+    }
+    .student_page .student_content .student_image-container{
+        max-width: 50%;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .student_page .student_content .student_image-container{
+        max-width: 70%;
+    }
+  }

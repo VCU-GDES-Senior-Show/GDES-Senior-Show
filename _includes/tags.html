@@ -1,0 +1,43 @@
+{% for tag in student.tags %}
+  {% if tag contains "Communication" %}
+    <img class="tag-icon" src="../assets/icons/small/Communication.png" />
+  {% elsif tag contains "Culture" %}
+    <img class="tag-icon" src="../assets/icons/small/Culture.png" />
+  {% elsif tag contains "Emotion" %}
+    <img class="tag-icon" src="../assets/icons/small/Emotions.png" />
+  {% elsif tag contains "Environment" %}
+    <img class="tag-icon" src="../assets/icons/small/Environment.png" />
+  {% elsif tag contains "Family" %}
+    <img class="tag-icon" src="../assets/icons/small/Family.png" />
+  {% elsif tag contains "Fashion" %}
+    <img class="tag-icon" src="../assets/icons/small/Fashion.png" />
+  {% elsif tag contains "Food" %}
+    <img class="tag-icon" src="../assets/icons/small/Food.png" />
+  {% elsif tag contains "History" %}
+    <img class="tag-icon" src="../assets/icons/small/History.png" />
+  {% elsif tag contains "Identity" %}
+    <img class="tag-icon" src="../assets/icons/small/Identity.png" />
+  {% elsif tag contains "Love" %}
+    <img class="tag-icon" src="../assets/icons/small/Love.png" />
+  {% elsif tag contains "Memory" %}
+    <img class="tag-icon" src="../assets/icons/small/Memory.png" />
+  {% elsif tag contains "Movement" %}
+    <img class="tag-icon" src="../assets/icons/small/Movement.png" />
+  {% elsif tag contains "Music" %}
+    <img class="tag-icon" src="../assets/icons/small/Music.png" />
+  {% elsif tag contains "Nostalgia" %}
+    <img class="tag-icon" src="../assets/icons/small/Nostalgia.png" />
+  {% elsif tag contains "Relationship" %}
+    <img class="tag-icon" src="../assets/icons/small/Relationships.png" />
+  {% elsif tag contains "Spirituality" %}
+    <img class="tag-icon" src="../assets/icons/small/Spirituality.png" />
+  {% elsif tag contains "Sports" %}
+    <img class="tag-icon" src="../assets/icons/small/Sports.png" />
+  {% elsif tag contains "Typography" %}
+    <img class="tag-icon" src="../assets/icons/small/Typography.png" />
+  {% elsif tag contains "World Building" %}
+    <img class="tag-icon" src="../assets/icons/small/Worldbuilding.png" />
+  {% else %}
+    <img class="tag-icon" src="../assets/icons/small/Other.png" />
+  {% endif %}
+{% endfor %}

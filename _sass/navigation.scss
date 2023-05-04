@@ -9,9 +9,15 @@ nav {
    background-color: $dark-green;
 }
 
-.nav_logo img{
-    max-width: 60px;
-    object-fit: contain;
+.nav_logo {
+    display: flex;
+    align-items: center;
+
+    img{
+        max-width: 60px;
+        object-fit: contain;
+        margin-right: 12px;
+    }
 }
 
 .nav_button-container {
@@ -25,4 +31,9 @@ nav {
 
 .nav_button-container :hover{
     text-decoration: underline;
+}
+
+.nav-header {
+    position: relative;
+    top: 3px;
 }

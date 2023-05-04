@@ -88,7 +88,7 @@
     background: $dark-green;
     padding: 4px 0 4px 8px;
     position: absolute;
-    transform: translate(-100%, -50%);
+    // transform: translate(-100%, -50%);
 
     .tag-icon {
         margin-right: 8px;
@@ -103,6 +103,26 @@
 //     right: 3%;
 //     top: 12vh;
 // }
+
+.student_connections-container {
+    position: absolute;
+    right: 4vw;
+    display: flex;
+    flex-flow: column wrap;
+    width: 10vw;
+    align-items: flex-end;
+
+    .tag {
+        position: relative;
+        left: 8px;
+        padding-right: 8px;
+    }
+}
+
+
+
+
+
 
 // #connection1 {
 //     right: 3%;
@@ -187,92 +207,82 @@
 
 
 
-// .student_connections-container {
-//     position: absolute;
-//     right: 2vw;
-//     display: flex;
-//     flex-direction: column;
-//     flex-wrap: wrap;
-//     width: 10vw;
+
+// #connection1 {
+//     right: 3%;
+//     top: 7%;
 // }
 
+// #connection2 {
+//     left: 32%;
+//     bottom: 3%;
+// }
 
+// #connection3 {
+//     right: 3%;
+//     top: 10%;
+// }
 
-#connection1 {
-    right: 3%;
-    top: 7%;
-}
+// #connection4 {
+//     top: 28%;
+//     left: 3%;
+// }
 
-#connection2 {
-    left: 32%;
-    bottom: 3%;
-}
+// #connection5 {
+//     bottom: 6%;
+//     right: 20%;
+// }
 
-#connection3 {
-    right: 3%;
-    top: 10%;
-}
+// #connection6 {
+//     top: 30%;
+//     right: 2%;
+// }
 
-#connection4 {
-    top: 28%;
-    left: 3%;
-}
+// #connection7 {
+//     top: 6%;
+//     right: 18%;
+// }
 
-#connection5 {
-    bottom: 6%;
-    right: 20%;
-}
+// #connection8 {
+//     top: 5%;
+//     left: 12%;
+// }
 
-#connection6 {
-    top: 30%;
-    right: 2%;
-}
+// #connection9 {
+//     bottom: 9%;
+//     left: 26%;
+// }
 
-#connection7 {
-    top: 6%;
-    right: 18%;
-}
+// #connection10 {
+//     bottom: 45%;
+//     left: 8%;
+// }
 
-#connection8 {
-    top: 5%;
-    left: 12%;
-}
+// #connection11 {
+//     top: 3%;
+//     right: 4%;
+// }
 
-#connection9 {
-    bottom: 9%;
-    left: 26%;
-}
+// #connection12 {
+//     bottom: 4%;
+//     left: 14%;
+// }
 
-#connection10 {
-    bottom: 45%;
-    left: 8%;
-}
+// #connection13 {
+//     bottom: 2%;
+//     right: 16%;
+// }
 
-#connection11 {
-    top: 3%;
-    right: 4%;
-}
+// #connection14 {
+//     bottom: 5%;
+//     right: 8%;
+// }
 
-#connection12 {
-    bottom: 4%;
-    left: 14%;
-}
+// #connection15 {
+//     bottom: 4%;
+//     left: 12%;
+// }
 
-#connection13 {
-    bottom: 2%;
-    right: 16%;
-}
-
-#connection14 {
-    bottom: 5%;
-    right: 8%;
-}
-
-#connection15 {
-    bottom: 4%;
-    left: 12%;
-}
-
-#connection16, #connection17, #connection18, #connection19, #connection20, #connection21, #connection22, #connection23, #connection24, #connection25 {
-    display: none;
-}
+// #connection16, #connection17, #connection18, #connection19, #connection20, #connection21, #connection22, #connection23, #connection24, #connection25 {
+//     display: none;
+// }

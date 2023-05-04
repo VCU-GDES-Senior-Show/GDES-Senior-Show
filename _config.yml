@@ -43,7 +43,7 @@ plugins:
 collections:
   students:
     output: true
-    permalink: /student/:name
+    permalink: /directory/:name
     layout: student.html
 
 defaults:

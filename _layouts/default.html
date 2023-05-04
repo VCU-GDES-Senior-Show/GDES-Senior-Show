@@ -16,20 +16,25 @@
     </script>
 
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <link rel="icon" href="/assets/logos/Low Res PNGs/Mycelium_Logo_Mark-02.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta itemprop="description" name="description" content="{% if page.projectDesc %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
+
+    <title>
+      {%if page.name %}
+          {{ page.title }}
+      {% else %}
+          {{ site.title }}
+      {% endif %}
+   </title>    
+   <link rel="icon" href="/assets/logos/Low Res PNGs/Mycelium_Logo_Mark-02.png">
 
 
-    <!-- <link rel="stylesheet" href="/assets/javascript/splide-4.1.3/dist/css/themes/splide-skyblue.min.css"> -->
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/zmu8lme.css">
     <link rel="stylesheet" type="text/css" href="/assets/javascript/slick-1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/javascript/slick-1.8.1/slick/slick-theme.css"/>
 
 
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 

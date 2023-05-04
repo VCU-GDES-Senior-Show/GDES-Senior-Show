@@ -11,8 +11,8 @@
         max-width: 70vw;
         position: relative;
         display: flex;
+        flex-flow: row wrap;
         justify-content: space-between;
-        align-items: space-between;
 
         .student_info-container {
             min-width: 400px;

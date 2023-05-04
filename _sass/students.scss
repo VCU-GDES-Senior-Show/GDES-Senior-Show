@@ -25,10 +25,23 @@
                 display: flex;
                 flex-wrap: wrap;
             }
+
+            .student_projectName {
+                line-height: 93%;
+            }
+
+            .student_name {
+                margin-top: 5px;
+            }
             
             .student_projectDesc { 
                 position: relative;
                 text-align: left;
+                line-height: 18pt;
+            }
+
+            a {
+                color: #ed9400;
             }
         }
 

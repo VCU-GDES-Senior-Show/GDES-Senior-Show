@@ -85,7 +85,7 @@
 {% endif %}
 
 {% assign student_projectName   = student.projectName %}
-{% assign student_projectDesc = student.projectDesc  | newline_to_br %}
+{% assign student_projectDesc = student.projectDesc  | newline_to_br | markdownify %}
 
 {% assign student_url = student.url%}
 {% assign student_tag = student.tags%}

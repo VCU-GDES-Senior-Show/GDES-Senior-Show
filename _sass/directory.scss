@@ -33,12 +33,12 @@
 	.description {
 		margin: 20px 0;
 	}
-  
+
     .student_tags {
       position: relative;
       display: flex;
       flex-wrap: wrap;
-  
+
 		.sort {
 			position: absolute;
 			top: 2px;
@@ -62,7 +62,7 @@
 			filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(7492%) hue-rotate(344deg) brightness(112%) contrast(107%);
 			display: none;
 		}
-	
+
 		.tag-word {
 			font-size: 20px;
 			margin-left: 12px;
@@ -95,7 +95,7 @@
 				max-width: 28px;
 				max-height: 28px;
 			}
-	
+
 			&:hover {
 				background: $yellow;
 
@@ -108,7 +108,7 @@
 		#other.tag {
 			display: none;
 		}
-		
+
 		#reset-button {
 			font-size: 16px;
 			font-family: $articulat-cf;
@@ -121,11 +121,11 @@
 		}
     }
 }
-  
+
 .selected {
 	background: $yellow;
 }
-  
+
 .js .loading::before {
 	content: '';
 	position: fixed;
@@ -188,7 +188,7 @@
 		height: 100%;
 	}
 
-	
+
 	// &>*:not(.item__meta) {
 	// 	bottom: 100px;
 	// }
@@ -259,8 +259,8 @@
 		display: flex;
 		align-items: center;
 		white-space: nowrap;
-	
-	
+
+
 		.tag-icon  {
 			max-width: 20px;
 			max-height: 20px;
@@ -357,3 +357,11 @@ div .item .item--style-6 {
 		fill: $dark-green;
 	}
 }
+@media (max-width:750px) {
+    .about {
+        padding: 0%;
+        margin: 5%;
+        width: auto;
+        text-align: center;
+        position: relative;
+    }

@@ -170,7 +170,7 @@
       }
 
       .about {
-        
+
       }
     }
 
@@ -268,4 +268,15 @@
         
       }
     }
+}
+
+
+@media (max-width:750px) {
+  .about {
+      padding: 0%;
+      margin: 5%;
+      width: auto;
+      text-align: center;
+      position: relative;
+  }
 }

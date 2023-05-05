@@ -6,9 +6,9 @@ window.onload = function() {
   var winHeight = window.innerHeight;
 
   // calculate boundaries of center box
-  var centerBoxTop = (winHeight - 600) / 2;
+  var centerBoxTop = (winHeight - 400) / 2;
   var centerBoxLeft = (winWidth - 600) / 2;
-  var centerBoxBottom = centerBoxTop + 600;
+  var centerBoxBottom = centerBoxTop + 400;
   var centerBoxRight = centerBoxLeft + 600;
 
   // array to keep track of previously positioned elements

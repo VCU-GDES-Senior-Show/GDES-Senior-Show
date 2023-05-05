@@ -80,7 +80,7 @@ layout: default
 
           <p class="student_projectDesc">{{ student_projectDesc }}</p>
             </br>
-          {% if student.email %}
+          <!-- {% if student.email %}
             <a
               class="student-links student_email"
               href="mailto:{{student_email}}"
@@ -88,17 +88,7 @@ layout: default
               <img src="../assets/icons/email.png"/>
               <span>{{ student_email }}</span>
             </a>
-          {% endif %}
-
-          {% if student.insta2 %}
-          <a
-            class="student-links student_email"
-            href="https://instagram.com/{{student.insta2}}"
-            target="_blank">
-            <img src="../assets/icons/insta.png"/>
-            <span>@{{ student.insta2 }}</span>
-          </a>
-        {% endif %}
+          {% endif %} -->
 
           {% if student.website %}
           <a class="student-links student_website" href="{{student_websiteLink}}" target="_blank">
@@ -106,6 +96,13 @@ layout: default
               <span>{{ student_website }}</span>
           </a>
             {% endif %}
+
+            {% if student.website2 %}
+            <a class="student-links student_website" href="{{student_websiteLink}}" target="_blank">
+                <img src="../assets/icons/web.png"/>
+                <span>{{ student.website2 }}</span>
+            </a>
+              {% endif %}
             
             {% if student.instagram %}
                 <a class="student-links student_insta" href="{{student_instagramLink}}" target="_blank">
@@ -113,6 +110,26 @@ layout: default
                     <span>@{{ student_instagram }}</span>
                 </a>
             {% endif %}
+
+            {% if student.insta2 %}
+            <a
+              class="student-links student_insta"
+              href="https://instagram.com/{{student.insta2}}"
+              target="_blank">
+              <img src="../assets/icons/insta.png"/>
+              <span>@{{ student.insta2 }}</span>
+            </a>
+          {% endif %}
+
+          {% if student.insta3 %}
+          <a
+            class="student-links student_insta"
+            href="https://instagram.com/{{student.insta2}}"
+            target="_blank">
+            <img src="../assets/icons/insta.png"/>
+            <span>@{{ student.insta3 }}</span>
+          </a>
+        {% endif %}
             
             {% if student.otherSocials %}
                 <a class="student-links student_socials" href="{{student_socials}}" target="_blank">
@@ -148,7 +165,7 @@ layout: default
 
   <div class="student_connections-container">
     <p class="related">Related projects:</p>
-
+    <div class="student-connections">
     {% for student in site.students %}
 
       {% assign common_tags = "" %}
@@ -229,8 +246,55 @@ layout: default
         {% assign counter = counter | plus: 1 %}
       {% endif %}
     {% endfor %}
+    </div>
   </div>
 </div>
+
+
+
+<script>
+  // Shuffle array function
+  function shuffle(array) {
+    var currentIndex = array.length,
+      temporaryValue,
+      randomIndex;
+
+    // While there remain elements to shuffle
+    while (0 !== currentIndex) {
+      // Pick a remaining element
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // Swap with current element
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
+
+  // Get the student connections container
+  var connectionsContainer = document.querySelector(".student_connections-container .student-connections");
+
+  // Get all student connection links
+  var connectionLinks = connectionsContainer.querySelectorAll(".tag");
+
+  // Convert node list to array
+  var connectionArray = Array.from(connectionLinks);
+
+  // Shuffle the array
+  var shuffledConnections = shuffle(connectionArray);
+
+  // Clear the current content of the container
+  connectionsContainer.innerHTML = "";
+
+  // Show only the first 15 shuffled links
+  for (var i = 0; i < 15 && i < shuffledConnections.length; i++) {
+    connectionsContainer.appendChild(shuffledConnections[i]);
+  }
+</script>
+
 
 
 

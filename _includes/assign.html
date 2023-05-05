@@ -69,11 +69,11 @@
 {% assign student_socials  = student.otherSocials %}
 
 {% if student.website contains "https://" %}
-    {% assign student_website = student.website | replace: "https://", "" | replace: "/", "" %}
+    {% assign student_website = student.website | replace: "https://", "" %}
 {% elsif student.website contains "http://" %}
-    {% assign student_website = student.website | replace: "http://", "" | replace: "/", "" %}
+    {% assign student_website = student.website | replace: "http://", "" %}
 {% else %}
-    {% assign student_website = student.website | replace: "/", "" %}
+    {% assign student_website = student.website %}
 {% endif %}
 
 {% if student.website contains "https://"%}

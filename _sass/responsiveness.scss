@@ -35,7 +35,9 @@
       }
 
       .student_connections-container {
-        // right: 6vw;
+        .tag {
+          max-width: 160px;
+        }
       }
     }
     
@@ -63,7 +65,17 @@
         width: fit-content;
         max-width: 100%;
         align-items: flex-start;
+
+        .tag {
+          max-width: fit-content;
+        }
       }
+
+      .student-connections {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+    }
     
     
       .directory-intro {
@@ -100,6 +112,9 @@
         font-size: 24px;
       }
       p {
+        font-size: 16px;
+      }
+      li {
         font-size: 16px;
       }
       
@@ -219,6 +234,11 @@
             left: 8px;
             padding-right: 8px;
         }
+      }
+
+      .student-connections {
+        display: block;
+        width: 100%;
       }
 
       .home_page .home_logo{

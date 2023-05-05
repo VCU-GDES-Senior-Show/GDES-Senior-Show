@@ -1,3 +1,8 @@
+// body:not(.student-page) {
+//     font-size: 0px;
+// }
+
+
 .student_page {
     width: 100vw;
     min-height: calc(100vh - 60px);
@@ -8,14 +13,14 @@
     align-items: flex-start;
 
     .student_content {
-        max-width: 70vw;
+        max-width: 100%;
         position: relative;
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: space-between;
 
         .student_info-container {
-            min-width: 400px;
+            min-width: 320px;
             max-width: 45%;
             height: 100%;
             position: relative;
@@ -104,33 +109,58 @@
     right: 4vw;
     display: flex;
     flex-flow: column wrap;
-    width: 10vw;
+    width: fit-content;
     align-items: flex-end;
 
     .tag {
         position: relative;
         left: 8px;
-        padding-right: 8px;
+        padding-right: 12px;
+        max-width: 220px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .tag .tag-word {
+        display: inline-block;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
 
+.student-links {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 8px;
+}
 
+.student-links span {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
+.student-links img {
+    margin-right: 6px;
+}
 
+.related {
+    margin-bottom: 12px;
+}
 
+#connection16, #connection17, #connection18, #connection19, #connection20, #connection21, #connection22, #connection23, #connection24, #connection25, #connection26, #connection27, #connection28, #connection29, #connection30, #connection31, #connection32, #connection33, #connection34, #connection35, #connection36, #connection37, #connection38, #connection39, #connection40 {
+    display: none;
+}
 
-
-
-
-
-
-
-// .related {
-//     position: absolute;
-//     right: 3%;
-//     top: 12vh;
-// }
 
 
 

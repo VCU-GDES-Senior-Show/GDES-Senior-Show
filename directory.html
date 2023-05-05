@@ -12,7 +12,6 @@ tags:
   - Religion/Spirituality
   - Branding/Design/Typography
   - Fashion
-  - Sports
   - Movement
   - Love
   - Language/Communication
@@ -22,6 +21,8 @@ tags:
   - Music
   - Other
 ---
+
+<!-- <script>document.documentElement.className = 'js';</script> -->
 
 {% include navigation.html %}
 {% include assign.html %}
@@ -72,8 +73,6 @@ tags:
           <img class="tag-icon" src="../assets/icons/small/Relationships.png" />
         {% elsif tag contains "Spirituality" %}
           <img class="tag-icon" src="../assets/icons/small/Spirituality.png" />
-        {% elsif tag contains "Sports" %}
-          <img class="tag-icon" src="../assets/icons/small/Sports.png" />
         {% elsif tag contains "Typography" %}
           <img class="tag-icon" src="../assets/icons/small/Typography.png" />
         {% elsif tag contains "World Building" %}
@@ -81,7 +80,7 @@ tags:
         {% endif %}
       </span>
     {%- endfor -%}
-    <p id="reset-button">Reset filter</p>
+    <p id="reset-button">reset</p>
   </div>
 </div>
 

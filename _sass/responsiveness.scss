@@ -28,6 +28,15 @@
       .directory-intro {
         max-width: 70vw;
       }
+
+
+      .student_page {
+        padding: 12vh 22vw 12vh 8vw;
+      }
+
+      .student_connections-container {
+        // right: 6vw;
+      }
     }
     
     
@@ -35,13 +44,27 @@
       .home_page .home_logo{
           max-width: 40%;
       }
-      .student_page .student_content {
-          max-width: 90vw;
-          justify-content: space-evenly;
+      .student_page {
+        padding: 12vh 8vw;
+        flex-flow: column;
+
       }
       .student_page .student_content .student_image-container{
-          max-width: 50%;
+          max-width: 48%;
       }
+
+      .student_connections-container {
+        position: relative;
+        left: 0;
+        top: 0;
+        padding: 4vh 0;
+        display: flex;
+        flex-flow: row wrap;
+        width: fit-content;
+        max-width: 100%;
+        align-items: flex-start;
+      }
+    
     
       .directory-intro {
         max-width: 70vw;
@@ -69,6 +92,17 @@
     
     
     @media only screen and (max-width: 900px) {
+      h2 {
+        font-size: 32px;
+        margin-bottom: 4px;
+      }
+      h3 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+      }
+      
       .directory-intro .student_tags {
 
         .sort {
@@ -104,6 +138,39 @@
           filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(7492%) hue-rotate(344deg) brightness(112%) contrast(107%);
           display: none;
         }
+      }
+
+      .student_page {
+        align-items: center;
+        
+        .student_content {
+          flex-flow: column-reverse;
+          max-width: 100%;
+          padding: 0;
+          gap: 40px;
+
+          .student_info-container {
+            max-width: 100%;
+          }
+          .student_image-container {
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .slick-list {
+              border-radius: 20px;
+              min-width: 100%;
+              max-height: 400px;
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+      }
+
+      .about {
+
       }
     }
 
@@ -142,21 +209,55 @@
       .item__svg {
         min-height: 300px;
       }
-    }
-    
-    
-    
-    @media only screen and (max-width: 575px) {
+
+      .student_connections-container {    
+        display: block;
+        width: 100%;
+
+        .tag {
+            position: relative;
+            left: 8px;
+            padding-right: 8px;
+        }
+      }
+
       .home_page .home_logo{
-          max-width: 70%;
-          top: 40%;
+        max-width: 70%;
+        top: 40%;
       }
       .project-button{
           top: 60%;
       }
     
-      .student_page .student_content .student_image-container{
-          max-width: 70%;
+      .student_page {
+        align-items: center;
+        padding: 12vh 12vw;
+        
+        .student_content {
+          flex-flow: column-reverse;
+          max-width: 100%;
+          padding: 0;
+          gap: 40px;
+
+          .student_info-container {
+            max-width: 100%;
+            min-width: 200px;
+          }
+          .student_image-container {
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .slick-list {
+              border-radius: 20px;
+              min-width: 100%;
+              max-height: 320px;
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
       }
       
       .about {
@@ -164,7 +265,18 @@
       }
 
       nav {
-
+        
       }
     }
+}
+
+
+@media (max-width:750px) {
+  .about {
+      padding: 0%;
+      margin: 5%;
+      width: auto;
+      text-align: center;
+      position: relative;
+  }
 }

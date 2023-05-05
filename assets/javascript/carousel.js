@@ -1,10 +1,15 @@
 $(document).ready(function(){
-    $('.student_image-container').slick({
+  var adaptiveHeightValue = true;
+  if ($(window).width() < 900) {
+      adaptiveHeightValue = false;
+  }
+  $('.student_image-container').slick({
       infinite: true,
+      dots: true,
       speed: 300,
       slidesToShow: 1,
       autoplay: true,
       autoplaySpeed: 5000,
-      adaptiveHeight: true,
-    });
+      adaptiveHeight: adaptiveHeightValue,
   });
+});

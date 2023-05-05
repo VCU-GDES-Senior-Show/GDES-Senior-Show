@@ -385,3 +385,8 @@ div .item .item--style-6 {
 		fill: $dark-green;
 	}
 }
+@media screen and (max-width:750px) {
+	body{
+    font-size:10px;
+
+    }

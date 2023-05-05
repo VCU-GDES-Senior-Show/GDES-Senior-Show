@@ -1,11 +1,35 @@
-.container {
+.error-container {
     margin: 10px auto;
     max-width: 600px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    position: relative;
+    top: 20%;
   }
   h1 {
     margin: 30px 0;
     font-size: 4em;
     line-height: 1;
     letter-spacing: -1px;
+  }
+
+  a.home {
+      background-color:$sand;
+      padding: 4px 12px;
+      margin-top: 20px;
+      width: fit-content;
+      border-radius: 25px;
+      color: $dark-green;
+      text-align: center;
+  
+      &:hover {
+          background: $yellow;
+      }
+  }
+
+  a.home:hover{
+    text-decoration: underline;
   }

@@ -1,15 +1,16 @@
 <nav class="navigation">
 
-    <div class="nav-logo">
-        <img src="../assets/logos/Low Res PNGs/Mycelium_Logo_Mark-01.png"/>
-    </div>
+    <a class="nav_logo" href="/index.html">
+        <img src="../assets/logos/Low Res PNGs/Mycelium_Logo_Mark-02.png"/>
+        <h3 class="nav-header">MYCELIUM</h3>
+    </a>
   
-    <div class="nav-button_container">
+    <div class="nav_button-container">
         {% for item in site.data.navigation %}
   
         {% assign page_name = item.name | slugify %}
   
-        <a href="{{ site.url }}{{ item.link }}" class="nav-button {% if page.url == item.link or (item.name == "home" and page.url == "/") %}current{% endif %}" id="{{ page_name }}">
+        <a href="{{ site.url }}{{ item.link }}" class="nav_button {% if page.url == item.link or (item.name == "home" and page.url == "/") %}current{% endif %}" id="{{ page_name }}">
         {{ item.name }}
         </a>
         {% endfor %}

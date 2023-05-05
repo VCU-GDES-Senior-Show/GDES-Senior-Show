@@ -1,0 +1,298 @@
+.student_page {
+    width: 100vw;
+    min-height: calc(100vh - 60px);
+    padding: 12vh 20vw 12vh 10vw;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .student_content {
+        max-width: 70vw;
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .student_info-container {
+            min-width: 400px;
+            max-width: 45%;
+            height: 100%;
+            position: relative;
+
+            .student_tags {
+                margin: 16px 0 12px 0;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .student_projectName {
+                line-height: 93%;
+            }
+
+            .student_name {
+                margin-top: 5px;
+            }
+            
+            .student_projectDesc { 
+                position: relative;
+                text-align: left;
+                line-height: 18pt;
+            }
+
+            a {
+                color: $yellow;
+            }
+
+        }
+
+        .student_image-container {
+            border-radius: 20px;
+            max-width: 45%;
+            height: 100%;
+            position: relative;
+        
+        
+            .slick-list {
+                border-radius: 20px;
+                min-width: 100%;
+                display: flex;
+                align-items: center;
+            }
+        
+            .slick-track {
+                display: flex;
+                align-items: center;
+            }
+            
+            img {
+                border-radius: 20px;
+                width: 100%;
+                max-width: 100%;
+                padding: 4px;
+                object-fit: contain;
+            }
+
+            &:hover {
+                cursor: zoom-in;
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }  
+    }
+}
+
+.student_connections {
+    color: $white;
+    background: $dark-green;
+    padding: 4px 0 4px 8px;
+    position: absolute;
+    // transform: translate(-100%, -50%);
+
+    .tag-icon {
+        margin-right: 8px;
+
+        filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(7492%) hue-rotate(344deg) brightness(112%) contrast(107%);
+    }
+    
+}
+
+.student_connections-container {
+    position: absolute;
+    right: 4vw;
+    display: flex;
+    flex-flow: column wrap;
+    width: 10vw;
+    align-items: flex-end;
+
+    .tag {
+        position: relative;
+        left: 8px;
+        padding-right: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .related {
+//     position: absolute;
+//     right: 3%;
+//     top: 12vh;
+// }
+
+
+
+// #connection1 {
+//     right: 3%;
+//     top: 13vh;
+// }
+
+// #connection2 {
+//     right: 3%;
+//     top: 15vh;
+// }
+
+// #connection3 {
+//     right: 5%;
+//     top: 17vh;
+// }
+
+// #connection4 {
+//     right: 4%;
+//     top: 220px;
+
+// }
+
+// #connection5 {
+//     right: 3%;
+//     top: 260px;
+
+// }
+
+// #connection6 {
+//     right: 2%;
+//     top: 300px;
+// }
+
+// #connection7 {
+//     right: 5%;
+//     top: 340x;
+// }
+
+// #connection8 {
+//     right: 3%;
+//     top: 380px;
+// }
+
+// #connection9 {
+//     right: 5%;
+//     top: 450px;
+// }
+
+// #connection10 {
+//     right: 3%;
+//     top: 380px;
+// }
+
+// #connection11 {
+//     right: 3%;
+//     top: 380px;
+// }
+
+// #connection12 {
+//     right: 5%;
+//     top: 480px;
+// }
+
+// #connection13 {
+//     right: 3%;
+//     top: 560px;
+// }
+
+// #connection14 {
+//     right: 3%;
+//     top: 520px;
+// }
+
+// #connection15 {
+//     right: 3%;
+//     top: 380px;
+// }
+
+// #connection16, #connection17, #connection18, #connection19, #connection20, #connection21, #connection22, #connection23, #connection24, #connection25 {
+//     display: none;
+// }
+
+
+
+
+// #connection1 {
+//     right: 3%;
+//     top: 7%;
+// }
+
+// #connection2 {
+//     left: 32%;
+//     bottom: 3%;
+// }
+
+// #connection3 {
+//     right: 3%;
+//     top: 10%;
+// }
+
+// #connection4 {
+//     top: 28%;
+//     left: 3%;
+// }
+
+// #connection5 {
+//     bottom: 6%;
+//     right: 20%;
+// }
+
+// #connection6 {
+//     top: 30%;
+//     right: 2%;
+// }
+
+// #connection7 {
+//     top: 6%;
+//     right: 18%;
+// }
+
+// #connection8 {
+//     top: 5%;
+//     left: 12%;
+// }
+
+// #connection9 {
+//     bottom: 9%;
+//     left: 26%;
+// }
+
+// #connection10 {
+//     bottom: 45%;
+//     left: 8%;
+// }
+
+// #connection11 {
+//     top: 3%;
+//     right: 4%;
+// }
+
+// #connection12 {
+//     bottom: 4%;
+//     left: 14%;
+// }
+
+// #connection13 {
+//     bottom: 2%;
+//     right: 16%;
+// }
+
+// #connection14 {
+//     bottom: 5%;
+//     right: 8%;
+// }
+
+// #connection15 {
+//     bottom: 4%;
+//     left: 12%;
+// }
+
+// #connection16, #connection17, #connection18, #connection19, #connection20, #connection21, #connection22, #connection23, #connection24, #connection25 {
+//     display: none;
+// }

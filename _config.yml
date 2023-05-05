@@ -25,9 +25,7 @@
 title: MYCELIUM
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Mycelium, the expansive and ever-growing underground network of fungi has come to represent much more than its scientific meaning: through four tumultuous and uncertain years of the 2023 Graphic Design Seniors’ undergraduate experience, a network of ideas, designers, and communal identity slowly unfurled.
 
 
 baseurl:
@@ -46,8 +44,6 @@ collections:
   students:
     output: true
     permalink: /directory/:name
-    source: student_info.csv
-    id_key: displayName
     layout: student.html
 
 defaults:
@@ -56,6 +52,9 @@ defaults:
       type: "student"
     values:
       layout: "student"
+
+kramdown:
+  hard_wrap: true
 
 
 

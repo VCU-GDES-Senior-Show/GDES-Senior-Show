@@ -1,7 +1,27 @@
 ---
 layout: default
 ---
-
 {% include navigation.html %}
 
-<p>Home</p>
+<div class="home_page">
+
+
+    <img class="home_logo" src="../assets/logos/Low Res PNGs/Mycelium_Logo_Final_NoFill_White.png"/>
+    {% for student in site.students %}
+        {% include assign.html %}
+
+
+
+
+
+        <a href="{{ student_url }}" id="student{{ forloop.index }}" class="scattered">
+            {{ student_name }}
+        </a>
+
+
+
+        
+    {% endfor %}
+    <a href="directory.html" class="project-button" >Exhibited Work</a>
+
+</div>

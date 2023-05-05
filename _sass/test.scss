@@ -1,0 +1,25 @@
+.your-class {
+	position: relative;
+    max-width: 500px;
+    margin: 100px auto;
+
+
+	.slick-list {
+		// padding: 0 !important;
+		overflow: hidden !important;
+		border-radius: 20px;
+		display: flex;
+		align-items: center;
+	}
+
+	.slick-track {
+		display: flex;
+		align-items: center;
+	}
+	
+	img {
+		max-width: 100%;
+		object-fit: contain;
+		border-radius: 20px;
+	}
+  }

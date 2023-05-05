@@ -15,25 +15,67 @@
       gtag('config', 'G-BT3C0QZN7L');
     </script>
 
+
+
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta itemprop="description" name="description" content="{% if page.projectDesc %}{{ page.projectDesc | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
+
+
+
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{%if page.name %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}/thumbs/{{ page.image }}" />
+    <meta property="article:published_time" content="{{ page.date }}" />
+    <meta property="og:description" content="{% if page.projectDesc %}{{ page.projectDesc }}{% else %}{{ site.description }}{% endif %}">
+
+
+
+
+    <meta name="twitter:card" content="assets/logos/JPGS/Mycelium_Logo_Mark-02.jpg"/>
+    <meta name="twitter:title" content="{%if page.name %}{{ page.name }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.projectDesc %}{{ page.projectDesc }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:card" content="Mycelium, the expansive and ever-growing underground network of fungi has come to represent much more than its scientific meaning: through four tumultuous and uncertain years of the 2023 Graphic Design Seniors’ undergraduate experience, a network of ideas, designers, and communal identity slowly unfurled.">
+
+
+
+
+
+
+    <title>
+      {%if page.name %}
+          {{ page.title }}
+      {% else %}
+          {{ site.title }}
+      {% endif %}
+   </title>    
+   <link rel="icon" href="/assets/logos/Low Res PNGs/Mycelium_Logo_Mark-02.png">
+
+
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/zmu8lme.css">
+    <link rel="stylesheet" type="text/css" href="/assets/javascript/slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/javascript/slick-1.8.1/slick/slick-theme.css"/>
 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> <!--for slick-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> <!--for slick-->
+    <script type="text/javascript" src="/assets/javascript/slick-1.8.1/slick/slick.min.js"></script> <!--for slick-->
+
+    <script type="text/javascript" src="/assets/javascript/scattered.js"></script>
 
     {% feed_meta %}
     {% seo %}
   </head>
   
   <body>
-    <div class="content">
+    <div class="default-container">
       {{ content }}
     </div>
   </body>

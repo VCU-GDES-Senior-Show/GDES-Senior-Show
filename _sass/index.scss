@@ -1,5 +1,47 @@
-p {
-    font-family: $magneta;
-    font-weight: $magneta_semibold;
-    color: $green;
+.home_logo {
+    max-width: 33%;
+    height: auto;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+   
+    z-index: 3;
+}
+
+.project-button{
+    display: block;
+    background-color:$sand;
+    padding: 1%;
+    border-radius: 25px;
+    color: $dark-green;
+    text-align: center;
+    position:absolute;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:hover {
+        background: $yellow;
+    }
+}
+
+.scattered {
+    z-index: -1;
+}
+
+.home_page {
+    height: calc(100vh - 60px   );
+    width: 100vw;
+}
+
+
+.home_page a {
+    transform: translate(-50%, -50%);
+    transition: ease .2s;
+
+    &:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
 }

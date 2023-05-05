@@ -1,4 +1,45 @@
-.nav-logo img{
-    max-width: 60px;
-    object-fit: contain;
+nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between; 
+   position: relative;
+   height: 60px;
+   max-width: 100vw;
+   padding: 0 80px;
+   background-color: $dark-green;
 }
+
+.nav_logo {
+    display: flex;
+    align-items: center;
+
+    img{
+        max-width: 60px;
+        object-fit: contain;
+        margin-right: 12px;
+    }
+}
+
+.nav_button-container {
+    display: flex;
+
+    .nav_button {
+        color: $white;
+        padding-right: 24px;
+    }
+}
+
+.nav_button-container :hover{
+    text-decoration: underline;
+}
+
+.nav-header {
+    position: relative;
+    top: 3px;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-header {
+      display: none;
+    }
+  }

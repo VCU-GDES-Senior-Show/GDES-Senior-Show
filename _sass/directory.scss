@@ -357,11 +357,8 @@ div .item .item--style-6 {
 		fill: $dark-green;
 	}
 }
-@media (max-width:750px) {
-    .about {
-        padding: 0%;
-        margin: 5%;
-        width: auto;
-        text-align: center;
-        position: relative;
+@media screen and (max-width:750px) {
+	body{
+    font-size:10px;
+
     }
